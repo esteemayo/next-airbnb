@@ -1,3 +1,4 @@
+import Logo from './Logo';
 import Container from '../Container';
 
 const Navbar = () => {
