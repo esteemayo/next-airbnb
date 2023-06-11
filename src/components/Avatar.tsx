@@ -10,6 +10,7 @@ const Avatar = () => {
         width={30}
         height={30}
         alt='Avatar'
+        className='rounded-full'
       />
     </div>
   );
