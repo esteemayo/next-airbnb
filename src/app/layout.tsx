@@ -1,6 +1,7 @@
 import { Nunito } from 'next/font/google';
 
 import Navbar from '@/components/navbar/Navbar';
+import './globals.css';
 
 const nunito = Nunito({ subsets: ['latin'] });
 
