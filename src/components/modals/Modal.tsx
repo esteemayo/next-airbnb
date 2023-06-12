@@ -11,7 +11,18 @@ interface ModalProps {
   secondaryLabel?(): string;
 }
 
-const Modal: React.FC<ModalProps> = () => {
+const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  onSubmit,
+  title,
+  body,
+  footer,
+  actionLabel,
+  disabled,
+  secondaryAction,
+  secondaryLabel,
+}) => {
   return <div>Modal</div>;
 };
 
