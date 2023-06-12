@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 interface ModalProps {
   isOpen?: boolean;
   onClose(): void;
