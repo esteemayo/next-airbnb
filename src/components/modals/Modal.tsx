@@ -39,6 +39,11 @@ const Modal: React.FC<ModalProps> = ({
     }, 300);
   }, [disabled, onClose]);
 
+  const handleSubmit = useCallback(() => {
+    if (disabled) return;
+    onSubmit();
+  }, [disabled, onSubmit]);
+
   useEffect(() => {
     setShowModal(isOpen);
   }, [isOpen]);
