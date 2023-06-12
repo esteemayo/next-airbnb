@@ -11,7 +11,7 @@ interface ModalProps {
   secondaryLabel?(): string;
 }
 
-const Modal = () => {
+const Modal: React.FC<ModalProps> = () => {
   return <div>Modal</div>;
 };
 
