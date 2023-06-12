@@ -24,6 +24,8 @@ const Modal: React.FC<ModalProps> = ({
   secondaryAction,
   secondaryLabel,
 }) => {
+  const [showModal, setShowModal] = useState(false);
+
   return <div>Modal</div>;
 };
 
