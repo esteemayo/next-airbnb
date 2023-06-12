@@ -3,6 +3,7 @@ import { Nunito } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
 import ClientOnly from '@/components/ClientOnly';
 import './globals.css';
+import Modal from '@/components/modals/Modal';
 
 const nunito = Nunito({ subsets: ['latin'] });
 
