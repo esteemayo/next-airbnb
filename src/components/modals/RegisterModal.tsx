@@ -9,6 +9,7 @@ import { useCallback, useState } from 'react';
 import Modal from './Modal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 import Heading from '../Heading';
+import Input from '../inputs/Input';
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
