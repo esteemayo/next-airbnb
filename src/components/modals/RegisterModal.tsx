@@ -10,6 +10,7 @@ import useRegisterModal from '@/hooks/useRegisterModal';
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
+  const [isLoading, setIsLoading] = useState(false);
 
   return <div>RegisterModal</div>;
 };
