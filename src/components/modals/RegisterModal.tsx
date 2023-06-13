@@ -39,7 +39,11 @@ const RegisterModal = () => {
     }
   };
 
-  const bodyContent = <div className='flex flex-col gap-4'></div>;
+  const bodyContent = (
+    <div className='flex flex-col gap-4'>
+      <Heading />
+    </div>
+  );
 
   return (
     <Modal
