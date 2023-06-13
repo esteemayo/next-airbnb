@@ -6,8 +6,8 @@ interface HeadingProps {
   center: boolean;
 }
 
-const Heading = () => {
-  return <div>Heading</div>;
+const Heading: React.FC<HeadingProps> = ({ title, subtitle, center }) => {
+  return <div className=''></div>;
 };
 
 export default Heading;
