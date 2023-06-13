@@ -32,6 +32,8 @@ const RegisterModal = () => {
       registerModal.onClose();
     } catch (err) {
       console.log(err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
