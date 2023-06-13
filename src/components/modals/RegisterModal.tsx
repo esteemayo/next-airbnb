@@ -8,6 +8,7 @@ import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import useRegisterModal from '@/hooks/useRegisterModal';
 import Modal from './Modal';
+import Heading from '../Heading';
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
