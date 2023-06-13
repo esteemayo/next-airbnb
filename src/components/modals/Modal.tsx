@@ -1,6 +1,6 @@
 'use client';
 
-import {IoMdClose} from 'react-icons/io'
+import { IoMdClose } from 'react-icons/io';
 import { useCallback, useEffect, useState } from 'react';
 interface ModalProps {
   isOpen?: boolean;
