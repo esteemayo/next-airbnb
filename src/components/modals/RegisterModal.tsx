@@ -74,6 +74,18 @@ const RegisterModal = () => {
     </div>
   );
 
+  const footerContent = (
+    <div className='flex flex-col gap-4 mt-3'>
+      <hr />
+      <Button
+        outline
+        label='Continue with Google'
+        icon={FcGoogle}
+        onClick={() => {}}
+      />
+    </div>
+  );
+
   return (
     <Modal
       disabled={isLoading}
@@ -83,6 +95,7 @@ const RegisterModal = () => {
       onClose={registerModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}
+      footer={footerContent}
     />
   );
 };
