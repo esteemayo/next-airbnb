@@ -12,6 +12,7 @@ import useRegisterModal from '@/hooks/useRegisterModal';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
 import Button from '../Button';
+import { registerUser } from '@/services/authService';
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -29,11 +30,11 @@ const RegisterModal = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
 
     try {
-      axios.post('/api/register', data);
+      await registerUser(data);
       registerModal.onClose();
     } catch (err) {
       toast.error('Something went wrong.');
