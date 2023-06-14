@@ -4,7 +4,7 @@ import { toast } from 'react-hot-toast';
 import logger from './logService';
 
 const authFetch = axios.create({
-  baseURL: '',
+  baseURL: '/api',
   headers: {
     'Content-Type': 'application/json',
   },
