@@ -24,7 +24,22 @@ const Input: React.FC<InputProps> = ({
   register,
   errors,
 }) => {
-  return <div>Input</div>;
+  return (
+    <div className='relative w-full'>
+      {formatPrice && (
+        <BiDollar
+          size={24}
+          className='text-neutral-700 absolute top-5 left-2'
+        />
+      )}
+      <input
+        id={id}
+        disabled={disabled}
+        {...register(id, { required })}
+        placeholder=' '
+      />
+    </div>
+  );
 };
 
 export default Input;
