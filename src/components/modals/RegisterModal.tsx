@@ -11,6 +11,7 @@ import Modal from './Modal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
+import Button from '../Button';
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
