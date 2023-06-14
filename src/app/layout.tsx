@@ -26,7 +26,6 @@ export default function RootLayout({
           <ToasterProvider />
           <Navbar />
           <RegisterModal />
-          {/* <Modal actionLabel='Submit' isOpen title='Login Page' /> */}
         </ClientOnly>
         {children}
       </body>
