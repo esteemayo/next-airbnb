@@ -36,13 +36,16 @@ const LoginModal = () => {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
 
-    try {
-      loginModal.onClose();
-    } catch (err) {
-      toast.error('Something went wrong.');
-    } finally {
+    signIn('credentials', {
+      ...data,
+      redirect: false,
+    }).then((callback) => {
       setIsLoading(false);
-    }
+
+      if (callback?.ok) {
+        toast.success('Logged in');
+      }
+    });
   };
 
   const bodyContent = (
