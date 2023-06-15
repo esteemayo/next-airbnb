@@ -11,6 +11,9 @@ import Modal from './Modal';
 import useLoginModal from '@/hooks/useLoginModal';
 import Heading from '../Heading';
 import useRegisterModal from '@/hooks/useRegisterModal';
+
+import Modal from './Modal';
+import Heading from '../Heading';
 import Button from '../Button';
 import Input from '../inputs/Input';
 
