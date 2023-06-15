@@ -12,6 +12,7 @@ import MenuItem from './MenuItem';
 const UserMenu = () => {
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = useCallback(() => {
