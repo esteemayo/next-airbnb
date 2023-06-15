@@ -10,6 +10,8 @@ import { toast } from 'react-hot-toast';
 import Modal from './Modal';
 import useLoginModal from '@/hooks/useLoginModal';
 import Heading from '../Heading';
+import useRegisterModal from '@/hooks/useRegisterModal';
+import Button from '../Button';
 import Input from '../inputs/Input';
 
 const LoginModal = () => {
