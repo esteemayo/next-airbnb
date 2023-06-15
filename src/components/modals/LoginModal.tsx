@@ -12,7 +12,6 @@ import useLoginModal from '@/hooks/useLoginModal';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
 import Button from '../Button';
-import { registerUser } from '@/services/authService';
 
 const LoginModal = () => {
   const loginModal = useLoginModal();
