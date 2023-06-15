@@ -18,6 +18,7 @@ import Button from '../Button';
 import Input from '../inputs/Input';
 
 const LoginModal = () => {
+  const router = useRouter;
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
 
