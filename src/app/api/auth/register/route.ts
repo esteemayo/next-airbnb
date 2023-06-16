@@ -2,6 +2,7 @@ import bcrypt from 'bcryptjs';
 import { NextResponse } from 'next/server';
 
 import prisma from '@/libs/prismadb';
+import User from '@/models/User';
 
 interface UserInputs {
   name: string;
