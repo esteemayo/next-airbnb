@@ -1,6 +1,20 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
+interface AccountModel {
+  type: string;
+  provider: string;
+  providerAccountId: string;
+  refresh_token: string;
+  access_token: string;
+  expires_at: string;
+  token_type: string;
+  scope: string;
+  id_token: string;
+  session_state: string;
+  userId: object;
+}
+
 const accountSchema = new Schema(
   {
     type: {
