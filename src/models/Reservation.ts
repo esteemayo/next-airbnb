@@ -1,6 +1,14 @@
 import mongoose, { Date } from 'mongoose';
 const { Schema } = mongoose;
 
+interface ReservationModel {
+  startDate: Date;
+  endDate: Date;
+  totalPrice: number;
+  user: object;
+  listing: object;
+}
+
 const reservationSchema = new Schema(
   {
     startDate: {
