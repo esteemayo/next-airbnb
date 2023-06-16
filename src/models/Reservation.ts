@@ -9,7 +9,7 @@ interface ReservationModel {
   listing: object;
 }
 
-const reservationSchema = new Schema(
+const reservationSchema = new Schema<ReservationModel>(
   {
     startDate: {
       type: Date,
