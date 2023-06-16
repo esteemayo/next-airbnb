@@ -21,7 +21,6 @@ export const POST = async (request: Request) => {
       name,
       email,
       hashedPassword,
-      },
     });
 
     if (user) {
