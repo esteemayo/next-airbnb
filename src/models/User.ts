@@ -1,5 +1,14 @@
-import mongoose from 'mongoose';
+import mongoose, { Date } from 'mongoose';
 const { Schema } = mongoose;
+
+interface UserModel {
+  name: string;
+  email: string;
+  emailVerified: Date;
+  password: string;
+  image: string;
+  favoriteIds: string[];
+}
 
 const userSchema = new Schema(
   {
