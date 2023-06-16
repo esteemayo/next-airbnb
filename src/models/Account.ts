@@ -15,7 +15,7 @@ interface AccountModel {
   userId: object;
 }
 
-const accountSchema = new Schema(
+const accountSchema = new Schema<AccountModel>(
   {
     type: {
       type: String,
