@@ -10,7 +10,7 @@ interface UserModel {
   favoriteIds: string[];
 }
 
-const userSchema = new Schema(
+const userSchema = new Schema<UserModel>(
   {
     name: {
       type: String,
