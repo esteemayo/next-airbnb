@@ -1,3 +1,4 @@
+import bcrypt from 'bcryptjs';
 import mongoose, { Date } from 'mongoose';
 const { Schema } = mongoose;
 
