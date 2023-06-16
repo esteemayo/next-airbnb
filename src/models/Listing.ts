@@ -15,7 +15,7 @@ interface ListingModel {
   reservations: object;
 }
 
-const listingSchema = new Schema({
+const listingSchema = new Schema<ListingModel>({
   title: {
     type: String,
     trim: true,
