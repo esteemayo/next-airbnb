@@ -22,11 +22,7 @@ export const POST = async (request: Request) => {
   await connectDB();
 
   try {
-    const user = await User.create({
-      name,
-      email,
-      password,
-    });
+    const user = await User.create({ ...newUser });
 
     if (user) {
       return NextResponse.json(user, {
