@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 
 import prisma from '@/libs/prismadb';
 import User from '@/models/User';
+import connectDB from '@/utils/db';
 
 interface UserInputs {
   name: string;
