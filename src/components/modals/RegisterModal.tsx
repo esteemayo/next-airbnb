@@ -32,7 +32,7 @@ const RegisterModal = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setIsLoading(true);
-
+    console.log(data);
     try {
       await registerUser(data);
       registerModal.onClose();
