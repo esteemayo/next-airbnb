@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { Date } from 'mongoose';
 const { Schema } = mongoose;
 
 const reservationSchema = new Schema(
