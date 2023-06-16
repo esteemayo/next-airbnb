@@ -20,7 +20,7 @@ export const POST = async (request: Request) => {
     const user = await User.create({
       name,
       email,
-      hashedPassword,
+      password,
     });
 
     if (user) {
