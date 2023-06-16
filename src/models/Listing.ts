@@ -1,6 +1,20 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
+interface ListingModel {
+  title: string;
+  description: string;
+  imageSrc: string;
+  category: string;
+  roomCount: number;
+  bathroomCount: number;
+  guestCount: number;
+  locationValue: string;
+  price: number;
+  user: object;
+  reservations: object;
+}
+
 const listingSchema = new Schema({
   title: {
     type: String,
