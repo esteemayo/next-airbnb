@@ -19,8 +19,6 @@ export const POST = async (request: Request) => {
     password,
   };
 
-  await connectDB();
-
   try {
     const user = await User.create({ ...newUser });
 
