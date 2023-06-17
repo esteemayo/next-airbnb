@@ -1,7 +1,5 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
-
 import Logo from './Logo';
 import Container from '../Container';
 import Search from './Search';
