@@ -1,13 +1,13 @@
 import GithubProvider from 'next-auth/providers/github';
 import bcrypt from 'bcryptjs';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import NextAuth from 'next-auth';
+import NextAuth, { AuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 
 import User from '@/models/User';
 import connectDB from '@/utils/db';
 
-const handler = NextAuth({
+export const authOptions: AuthOptions = {
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
@@ -49,6 +49,6 @@ const handler = NextAuth({
   pages: {
     signIn: '/',
   },
-});
+};
 
-export { handler as GET, handler as POST };
+export default NextAuth(authOptions);
