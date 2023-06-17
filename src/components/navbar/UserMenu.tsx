@@ -36,7 +36,7 @@ const UserMenu = () => {
         >
           <AiOutlineMenu />
           <div className='hidden md:block'>
-            <Avatar />
+            <Avatar src={session.data?.user?.image} />
           </div>
         </div>
       </div>
