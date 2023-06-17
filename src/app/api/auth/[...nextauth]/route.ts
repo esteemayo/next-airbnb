@@ -25,6 +25,7 @@ const handler = NextAuth({
         password: { label: 'password', type: 'password' },
       },
       async authorize(credentials) {
+        await connectDB();
         const { email, password } = credentials;
 
         try {
