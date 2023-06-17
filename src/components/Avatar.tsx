@@ -10,7 +10,7 @@ const Avatar: React.FC<AvatarProps> = ({ src }) => {
   return (
     <div>
       <Image
-        src='/images/placeholder.jpg'
+        src={src ?? '/images/placeholder.jpg'}
         width={30}
         height={30}
         alt='Avatar'
