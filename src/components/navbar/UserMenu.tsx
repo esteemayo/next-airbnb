@@ -11,6 +11,7 @@ import Avatar from '../Avatar';
 import MenuItem from './MenuItem';
 
 const UserMenu = () => {
+  const session = useSession();
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
 
