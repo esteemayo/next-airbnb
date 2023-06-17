@@ -4,7 +4,6 @@ import Navbar from '@/components/navbar/Navbar';
 import RegisterModal from '@/components/modals/RegisterModal';
 import ClientOnly from '@/components/ClientOnly';
 import ToasterProvider from '@/providers/ToasterProvider';
-import getCurrentUser from '@/actions/getCurrentUser';
 import LoginModal from '@/components/modals/LoginModal';
 import './globals.css';
 
