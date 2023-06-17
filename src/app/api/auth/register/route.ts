@@ -33,7 +33,7 @@ export const POST = async (request: Request) => {
       });
     }
   } catch (err) {
-    return NextResponse.json(err.message, {
+    return NextResponse.json(err, {
       status: 500,
     });
   }
