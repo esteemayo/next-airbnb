@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState } from 'react';
-import { useSession } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 import useLoginModal from '@/hooks/useLoginModal';
