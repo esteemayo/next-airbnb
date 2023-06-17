@@ -52,7 +52,7 @@ const UserMenu = () => {
                 <MenuItem onClick={() => {}} label='My properties' />
                 <MenuItem onClick={() => {}} label='Airbnb my home' />
                 <hr />
-                <MenuItem onClick={() => {}} label='Logout' />
+                <MenuItem onClick={() => signOut()} label='Logout' />
               </>
             ) : (
               <>
