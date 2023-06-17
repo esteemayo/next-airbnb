@@ -8,7 +8,7 @@ interface NavbarProps {
   currentUser?: object | null;
 }
 
-const Navbar = () => {
+const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
   return (
     <nav className='fixed w-full bg-white z-10 shadow-sm'>
       <div className='py-4 border-b-[1px]'>
