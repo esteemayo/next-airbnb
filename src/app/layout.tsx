@@ -15,17 +15,19 @@ export const metadata = {
   description: 'Airbnb',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const currentUser = await getCurrentUser();
+
   return (
     <html lang='en'>
       <body className={nunito.className}>
         <ClientOnly>
           <ToasterProvider />
-          <Navbar />
+          <Navbar currentUser={currentUser} />
           <LoginModal />
           <RegisterModal />
         </ClientOnly>
