@@ -18,8 +18,8 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
     CredentialsProvider({
-      id: 'Credentials',
-      name: 'credentials',
+      id: 'credentials',
+      name: 'Credentials',
       credentials: {
         email: { label: 'email', type: 'email' },
         password: { label: 'password', type: 'password' },
