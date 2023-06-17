@@ -5,7 +5,7 @@ import Container from '../Container';
 import Search from './Search';
 import UserMenu from './UserMenu';
 
-const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
+const Navbar = () => {
   return (
     <nav className='fixed w-full bg-white z-10 shadow-sm'>
       <div className='py-4 border-b-[1px]'>
