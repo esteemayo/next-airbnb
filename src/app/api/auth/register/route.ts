@@ -16,10 +16,12 @@ export const POST = async (request: Request) => {
 
   await connectDB();
 
+  const hashedPassword = await bcrypt.hash(password, 12);
+
   const newUser = {
     name,
     email,
-    password,
+    password: hashedPassword,
   };
 
   try {
