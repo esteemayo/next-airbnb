@@ -9,12 +9,14 @@ import { toast } from 'react-hot-toast';
 
 import Modal from './Modal';
 import useRegisterModal from '@/hooks/useRegisterModal';
+import useLoginModal from '@/hooks/useLoginModal';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
 import Button from '../Button';
 import { registerUser } from '@/services/authService';
 
 const RegisterModal = () => {
+  const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -42,6 +44,8 @@ const RegisterModal = () => {
       setIsLoading(false);
     }
   };
+
+  const handleToggle = useCallback(() => {});
 
   const bodyContent = (
     <div className='flex flex-col gap-4'>
