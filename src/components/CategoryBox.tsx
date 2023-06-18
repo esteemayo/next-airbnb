@@ -2,6 +2,7 @@
 
 import { IconType } from 'react-icons';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useCallback } from 'react';
 
 interface CategoryBoxProps {
   icon: IconType;
