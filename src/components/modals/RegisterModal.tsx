@@ -18,6 +18,7 @@ import { registerUser } from '@/services/authService';
 const RegisterModal = () => {
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
+
   const [isLoading, setIsLoading] = useState(false);
 
   const {
