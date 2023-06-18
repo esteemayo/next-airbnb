@@ -50,6 +50,11 @@ const handler = NextAuth({
     signIn: '/',
     error: '/',
   },
+  debug: process.env.NODE_ENV === 'development',
+  session: {
+    strategy: 'jwt',
+  },
+  secret: process.env.NEXTAUTH_SECRET,
 });
 
 export { handler as GET, handler as POST };
