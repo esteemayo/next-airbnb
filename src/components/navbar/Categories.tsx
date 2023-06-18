@@ -7,7 +7,10 @@ import CategoryBox from '../CategoryBox';
 import { categories } from '@/data';
 
 const Categories = () => {
+  const pathname = usePathname();
   const params = useSearchParams();
+
+  const category = params.get('category');
 
   return (
     <Container>
