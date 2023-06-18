@@ -7,7 +7,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
 import { signIn } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
 
 import useLoginModal from '@/hooks/useLoginModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
