@@ -18,6 +18,7 @@ const Navbar = () => {
           </div>
         </Container>
       </div>
+      <Categories />
     </nav>
   );
 };
