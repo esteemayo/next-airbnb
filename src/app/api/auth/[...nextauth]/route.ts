@@ -29,6 +29,10 @@ const handler = NextAuth({
         const { email, password } = credentials;
 
         try {
+          if (!email || !password) {
+            throw new Error('Invalid credentials!');
+          }
+
           const user = await User.findOne({ email }).select('+password');
           const isComparedPassword = await bcrypt.compare(
             password,
