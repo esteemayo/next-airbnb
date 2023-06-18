@@ -1,7 +1,7 @@
 'use client';
 
 import { IconType } from 'react-icons';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 interface CategoryBoxProps {
   icon: IconType;
