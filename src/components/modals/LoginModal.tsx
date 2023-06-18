@@ -56,7 +56,7 @@ const LoginModal = () => {
     });
   };
 
-  const handleToggle = useCallback(() = {
+  const handleToggle = useCallback(() => {
     loginModal.onClose();
     registerModal.onOpen();
   }, [loginModal, registerModal]);
