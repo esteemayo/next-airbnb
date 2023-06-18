@@ -9,12 +9,12 @@ import { toast } from 'react-hot-toast';
 
 import useLoginModal from '@/hooks/useLoginModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
+import { registerUser } from '@/services/authService';
 
 import Modal from './Modal';
 import Heading from '../Heading';
-import Input from '../inputs/Input';
 import Button from '../Button';
-import { registerUser } from '@/services/authService';
+import Input from '../inputs/Input';
 
 const RegisterModal = () => {
   const loginModal = useLoginModal();
