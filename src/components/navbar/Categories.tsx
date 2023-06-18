@@ -7,6 +7,8 @@ import CategoryBox from '../CategoryBox';
 import { categories } from '@/data';
 
 const Categories = () => {
+  const params = useSearchParams();
+
   return (
     <Container>
       <div className='pt-4 flex flex-row items-center justify-between overflow-x-auto'>
