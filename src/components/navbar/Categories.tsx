@@ -27,7 +27,7 @@ const Categories = () => {
             <CategoryBox
               key={label}
               label={label}
-              selected={category === 'label'}
+              selected={category === label}
               icon={icon}
             />
           );
