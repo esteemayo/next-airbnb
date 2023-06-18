@@ -35,13 +35,16 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
       delete updatedQuery.category;
     }
 
-    const url = qs.stringifyUrl({
-      url: '/',
-      query: updatedQuery,
-    }, {skipNull: true});
+    const url = qs.stringifyUrl(
+      {
+        url: '/',
+        query: updatedQuery,
+      },
+      { skipNull: true }
+    );
 
     router.push(url);
-  }, [label, params]);
+  }, [label, params, router]);
 
   return (
     <div
