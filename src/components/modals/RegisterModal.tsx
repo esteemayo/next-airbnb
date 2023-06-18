@@ -7,9 +7,10 @@ import { useCallback, useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { toast } from 'react-hot-toast';
 
-import Modal from './Modal';
-import useRegisterModal from '@/hooks/useRegisterModal';
 import useLoginModal from '@/hooks/useLoginModal';
+import useRegisterModal from '@/hooks/useRegisterModal';
+
+import Modal from './Modal';
 import Heading from '../Heading';
 import Input from '../inputs/Input';
 import Button from '../Button';
