@@ -102,7 +102,7 @@ const LoginModal = () => {
             onClick={loginModal.onClose}
             className='text-neutral-800 cursor-pointer hover:underline hover:underline-offset-[5px] transition'
           >
-            Log in
+            Create an account
           </div>
         </div>
       </div>
