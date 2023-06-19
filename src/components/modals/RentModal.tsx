@@ -84,7 +84,7 @@ const RentModal = () => {
       />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto'>
         {categories.map((item) => {
-          const { icon, label, description } = item;
+          const { icon, label } = item;
           return (
             <div key={label} className='col-span-1'>
               <CategoryInput
