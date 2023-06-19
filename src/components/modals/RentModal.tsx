@@ -21,6 +21,10 @@ const RentModal = () => {
     setStep((prev) => prev - 1);
   };
 
+  const onNext = () => {
+    setStep((prev) => prev + 1);
+  };
+
   return (
     <Modal
       isOpen={rentModal.isOpen}
