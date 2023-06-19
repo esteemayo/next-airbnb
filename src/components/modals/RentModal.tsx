@@ -33,6 +33,14 @@ const RentModal = () => {
     return 'Next';
   }, [step]);
 
+  const secondaryActionLabel = useMemo(() => {
+    if (step === STEPS.CATEGORY) {
+      return undefined;
+    }
+
+    return 'Back';
+  }, [step]);
+
   return (
     <Modal
       isOpen={rentModal.isOpen}
