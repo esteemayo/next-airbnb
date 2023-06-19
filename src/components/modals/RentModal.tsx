@@ -46,7 +46,6 @@ const RentModal = () => {
       isOpen={rentModal.isOpen}
       onClose={rentModal.onClose}
       onSubmit={rentModal.onClose}
-      title='Airbnb your home!'
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
       title='Airbnb your home!'
