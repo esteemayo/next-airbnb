@@ -5,6 +5,7 @@ import Modal from './Modal';
 import useRentModal from '@/hooks/useRentModal';
 import Heading from '../Heading';
 import { categories } from '@/data';
+import CategoryInput from '../inputs/CategoryInput';
 
 enum STEPS {
   CATEGORY = 0,
