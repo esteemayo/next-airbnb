@@ -15,6 +15,7 @@ enum STEPS {
 
 const RentModal = () => {
   const rentModal = useRentModal();
+  const [step, setStep] = useState(STEPS.CATEGORY);
 
   return (
     <Modal
