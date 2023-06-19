@@ -9,10 +9,13 @@ interface CategoryInputProps {
   onClick(value: string): void;
 }
 
-const CategoryInput = () => {
-  return (
-    <div>CategoryInput</div>
-  )
-}
+const CategoryInput: React.FC<CategoryInputProps> = ({
+  icon: Icon,
+  label,
+  selected,
+  onClick,
+}) => {
+  return <div>CategoryInput</div>;
+};
 
-export default CategoryInput
+export default CategoryInput;
