@@ -6,6 +6,7 @@ import ClientOnly from '@/components/ClientOnly';
 import ToasterProvider from '@/providers/ToasterProvider';
 import LoginModal from '@/components/modals/LoginModal';
 import AuthProvider from '@/providers/AuthProvider';
+import RentModal from '@/components/modals/RentModal';
 import './globals.css';
 
 const nunito = Nunito({ subsets: ['latin'] });
