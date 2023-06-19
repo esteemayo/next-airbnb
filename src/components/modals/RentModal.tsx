@@ -55,7 +55,12 @@ const RentModal = () => {
           const { icon, label, description } = item;
           return (
             <div key={label} className='col-span-1'>
-              {label}
+              <CategoryInput
+                onClick={() => {}}
+                selected={false}
+                label={label}
+                icon={icon}
+              />
             </div>
           );
         })}
