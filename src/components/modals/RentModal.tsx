@@ -49,6 +49,7 @@ const RentModal = () => {
       title='Airbnb your home!'
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
+      title='Airbnb your home!'
     />
   );
 };
