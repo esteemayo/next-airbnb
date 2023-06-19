@@ -8,6 +8,7 @@ import useRentModal from '@/hooks/useRentModal';
 import Heading from '../Heading';
 import { categories } from '@/data';
 import CategoryInput from '../inputs/CategoryInput';
+import CountrySelect from '../inputs/CountrySelect';
 
 enum STEPS {
   CATEGORY = 0,
