@@ -5,6 +5,7 @@ import { signOut, useSession } from 'next-auth/react';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 import useLoginModal from '@/hooks/useLoginModal';
+import useRentModal from '@/hooks/useRentModal';
 import useRegisterModal from '@/hooks/useRegisterModal';
 
 import Avatar from '../Avatar';
@@ -12,8 +13,10 @@ import MenuItem from './MenuItem';
 
 const UserMenu = () => {
   const session = useSession();
+
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
+  const rentModal = useRentModal();
 
   const [isOpen, setIsOpen] = useState(false);
 
