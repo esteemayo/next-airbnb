@@ -17,6 +17,10 @@ const RentModal = () => {
   const rentModal = useRentModal();
   const [step, setStep] = useState(STEPS.CATEGORY);
 
+  const onBack = () => {
+    setStep((prev) => prev - 1);
+  };
+
   return (
     <Modal
       isOpen={rentModal.isOpen}
