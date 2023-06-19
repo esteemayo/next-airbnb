@@ -28,6 +28,7 @@ export default async function RootLayout({
           <ClientOnly>
             <ToasterProvider />
             <Navbar />
+            <RentModal />
             <LoginModal />
             <RegisterModal />
           </ClientOnly>
