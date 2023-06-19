@@ -49,6 +49,16 @@ const RentModal = () => {
         title='Which of these best describes your place?'
         subtitle='Pick a category'
       />
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto'>
+        {categories.map((item) => {
+          const { icon, label, description } = item;
+          return (
+            <div key={label} className='col-span-1'>
+              {label}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 
@@ -61,6 +71,7 @@ const RentModal = () => {
       secondaryActionLabel={secondaryActionLabel}
       secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
       title='Airbnb your home!'
+      body={bodyContent}
     />
   );
 };
