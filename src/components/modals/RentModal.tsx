@@ -47,7 +47,8 @@ const RentModal = () => {
       onClose={rentModal.onClose}
       onSubmit={rentModal.onClose}
       title='Airbnb your home!'
-      actionLabel='Submit'
+      actionLabel={actionLabel}
+      secondaryActionLabel={secondaryActionLabel}
     />
   );
 };
