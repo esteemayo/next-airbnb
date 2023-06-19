@@ -1,11 +1,12 @@
-'use client'
+'use client';
 
-import Modal from "./Modal"
+import Modal from './Modal';
+import useRentModal from '@/hooks/useRentModal';
 
 const RentModal = () => {
-  return (
-    <div>RentModal</div>
-  )
-}
+  const rentModal = useRentModal();
 
-export default RentModal
+  return <Modal isOpen title='Airbnb your home!' />;
+};
+
+export default RentModal;
