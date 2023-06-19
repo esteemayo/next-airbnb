@@ -21,6 +21,12 @@ const UserMenu = () => {
     setIsOpen((prev) => !prev);
   }, []);
 
+  const onRent = useCallback(() => {
+    if (session.status === 'unauthenticated') {
+      return loginModal.onOpen();
+    }
+  }, [loginModal, session.status]);
+
   return (
     <div className='relative'>
       <div className='flex flex-row items-center gap-3'>
