@@ -6,7 +6,7 @@ import useRentModal from '@/hooks/useRentModal';
 const RentModal = () => {
   const rentModal = useRentModal();
 
-  return <Modal isOpen title='Airbnb your home!' />;
+  return <Modal isOpen={rentModal.isOpen} title='Airbnb your home!' />;
 };
 
 export default RentModal;
