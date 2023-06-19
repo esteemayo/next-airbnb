@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import Modal from './Modal';
 import useRentModal from '@/hooks/useRentModal';
 import Heading from '../Heading';
+import { categories } from '@/data';
 
 enum STEPS {
   CATEGORY = 0,
