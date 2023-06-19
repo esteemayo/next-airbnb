@@ -25,6 +25,14 @@ const RentModal = () => {
     setStep((prev) => prev + 1);
   };
 
+  const actionLabel = useMemo(() => {
+    if (step === STEPS.PRICE) {
+      return 'Create';
+    }
+
+    return 'Next';
+  }, [step]);
+
   return (
     <Modal
       isOpen={rentModal.isOpen}
