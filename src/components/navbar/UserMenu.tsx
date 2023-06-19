@@ -28,7 +28,9 @@ const UserMenu = () => {
     if (session.status === 'unauthenticated') {
       return loginModal.onOpen();
     }
-  }, [loginModal, session.status]);
+    
+    rentModal.onOpen();
+  }, [loginModal, rentModal, session.status]);
 
   return (
     <div className='relative'>
