@@ -40,6 +40,7 @@ const RentModal = () => {
     setValue,
     watch,
     formState: { errors },
+    reset,
   } = useForm<FieldValues>({
     defaultValues: {
       category: '',
@@ -83,6 +84,28 @@ const RentModal = () => {
 
   const onNext = () => {
     setStep((prev) => prev + 1);
+  };
+
+  const onSubmitHandler: SubmitHandler<FieldValues> = async (data) => {
+    if (step !== STEPS.PRICE) {
+      return onNext();
+    }
+
+    setIsLoading(true);
+
+    try {
+      await createListing(data);
+      toast.success('Listing Created');
+      router.refresh();
+      reset();
+      setStep(STEPS.CATEGORY);
+      rentModal.onClose();
+    } catch (err) {
+      toast.error('Something went wrong');
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const actionLabel = useMemo(() => {
