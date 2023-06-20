@@ -1,5 +1,7 @@
 'use client';
 
+import { useCallback } from 'react';
+
 interface CounterProps {
   title: string;
   subtitle: string;
