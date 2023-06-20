@@ -196,6 +196,7 @@ const RentModal = () => {
           disabled={isLoading}
           register={register}
           errors={errors}
+          required
         />
         <hr />
         <Input
@@ -204,6 +205,7 @@ const RentModal = () => {
           disabled={isLoading}
           register={register}
           errors={errors}
+          required
         />
       </div>
     );
@@ -215,6 +217,16 @@ const RentModal = () => {
         <Heading
           title='Now, set your price'
           subtitle='How much do you charge per night?'
+        />
+        <Input
+          id='price'
+          label='Price'
+          type='number'
+          formatPrice
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+          required
         />
       </div>
     );
