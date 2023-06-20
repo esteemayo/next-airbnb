@@ -38,7 +38,12 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
             <div className='font-semibold text-lg'>Click to upload</div>
             {value && (
               <div className='absolute inset-0 w-full h-full'>
-                <Image alt='upload' fill style={{ objectFit: 'cover' }} />
+                <Image
+                  src={value}
+                  fill
+                  alt='upload'
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
             )}
           </div>
