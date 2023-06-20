@@ -14,6 +14,7 @@ import Modal from './Modal';
 import useRentModal from '@/hooks/useRentModal';
 import Heading from '../Heading';
 import { categories } from '@/data';
+import { createListing } from '@/services/listingService';
 
 enum STEPS {
   CATEGORY = 0,
