@@ -4,14 +4,15 @@ import { useMemo, useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import dynamic from 'next/dynamic';
 
+import CategoryInput from '../inputs/CategoryInput';
+import Counter from '../inputs/Counter';
+import CountrySelect from '../inputs/CountrySelect';
+import ImageUpload from '../inputs/ImageUpload';
+
 import Modal from './Modal';
 import useRentModal from '@/hooks/useRentModal';
 import Heading from '../Heading';
 import { categories } from '@/data';
-import CategoryInput from '../inputs/CategoryInput';
-import CountrySelect from '../inputs/CountrySelect';
-import Counter from '../inputs/Counter';
-import ImageUpload from '../inputs/ImageUpload';
 
 enum STEPS {
   CATEGORY = 0,
