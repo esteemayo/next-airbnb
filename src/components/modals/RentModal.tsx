@@ -12,11 +12,11 @@ import CountrySelect from '../inputs/CountrySelect';
 import Input from '../inputs/Input';
 import ImageUpload from '../inputs/ImageUpload';
 
-import Modal from './Modal';
 import useRentModal from '@/hooks/useRentModal';
+import Modal from './Modal';
+import { createListing } from '@/services/listingService';
 import Heading from '../Heading';
 import { categories } from '@/data';
-import { createListing } from '@/services/listingService';
 
 enum STEPS {
   CATEGORY = 0,
