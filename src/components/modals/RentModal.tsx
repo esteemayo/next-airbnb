@@ -180,6 +180,17 @@ const RentModal = () => {
     );
   }
 
+  if (step === STEPS.DESCRIPTION) {
+    bodyContent = (
+      <div className='flex flex-col gap-8'>
+        <Heading
+          title='How would you describe your place?'
+          subtitle='Short and sweet works best!'
+        />
+      </div>
+    );
+  }
+
   return (
     <Modal
       isOpen={rentModal.isOpen}
