@@ -47,6 +47,7 @@ const RentModal = () => {
 
   const category = watch('category');
   const location = watch('location');
+  const guestCount = watch('guestCount');
 
   const Map = useMemo(
     () =>
@@ -135,7 +136,11 @@ const RentModal = () => {
           title='Share some basics about your place'
           subtitle='What amenities do you have?'
         />
-        <Counter title='Guests' subtitle='How many guests do you allow?' />
+        <Counter 
+          title='Guests'
+          subtitle='How many guests do you allow?'
+          value={guestCount}
+        />
       </div>
     );
   }
