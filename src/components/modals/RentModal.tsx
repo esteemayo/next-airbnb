@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic';
 import CategoryInput from '../inputs/CategoryInput';
 import Counter from '../inputs/Counter';
 import CountrySelect from '../inputs/CountrySelect';
+import Input from '../inputs/Input';
 import ImageUpload from '../inputs/ImageUpload';
 
 import Modal from './Modal';
