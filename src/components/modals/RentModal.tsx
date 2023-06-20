@@ -197,6 +197,14 @@ const RentModal = () => {
           register={register}
           errors={errors}
         />
+        <hr />
+        <Input
+          id='description'
+          label='Description'
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+        />
       </div>
     );
   }
