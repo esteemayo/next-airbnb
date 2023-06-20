@@ -10,6 +10,7 @@ import { categories } from '@/data';
 import CategoryInput from '../inputs/CategoryInput';
 import CountrySelect from '../inputs/CountrySelect';
 import dynamic from 'next/dynamic';
+import Counter from '../inputs/Counter';
 
 enum STEPS {
   CATEGORY = 0,
