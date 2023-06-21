@@ -10,7 +10,7 @@ const Home = () => {
   if (isEmpty) {
     return (
       <ClientOnly>
-        <EmptyState />
+        <EmptyState showReset />
       </ClientOnly>
     );
   }
