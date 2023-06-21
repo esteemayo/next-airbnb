@@ -1,4 +1,4 @@
-import { userRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 interface EmptyStateProps {
   title?: string;
