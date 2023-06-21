@@ -6,11 +6,11 @@ import EmptyState from '@/components/EmptyState';
 import getListings from '@/actions/getListings';
 
 const Home = async () => {
-  const listing = await getListings();
+  const listings = await getListings();
 
   const isEmpty = true;
 
-  if (isEmpty) {
+  if (listings.length === 0) {
     return (
       <ClientOnly>
         <EmptyState showReset />
