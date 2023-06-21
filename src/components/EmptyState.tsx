@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Heading from './Heading';
 
 interface EmptyStateProps {
   title?: string;
@@ -14,7 +15,12 @@ const EmptyState:React.FC<EmptyStateProps> = ({
   showReset,
 }) => {
   const router = useRouter();
-  return <div>EmptyState</div>;
+
+  return (
+    <div className='h-[60vh] flex flex-col gap-2 items-center justify-center'>
+      <Heading title={title} subtitle={subtitle} center />
+    </div>
+    );
 };
 
 export default EmptyState;
