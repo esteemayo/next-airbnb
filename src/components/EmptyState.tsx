@@ -1,3 +1,5 @@
+import { userRouter } from 'next/navigation';
+
 interface EmptyStateProps {
   title?: string;
   subtitle?: string;
@@ -9,6 +11,7 @@ const EmptyState:React.FC<EmptyStateProps> = ({
   subtitle = 'Try changing or removing some of your filters',
   showReset,
 }) => {
+  const router = useRouter();
   return <div>EmptyState</div>;
 };
 
