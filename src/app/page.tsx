@@ -5,6 +5,16 @@ import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
 
 const Home = () => {
+  const isEmpty = true;
+
+  if (isEmpty) {
+    return (
+      <ClientOnly>
+        <EmptyState />
+      </ClientOnly>
+    );
+  }
+
   return (
     <ClientOnly>
       <Container>
