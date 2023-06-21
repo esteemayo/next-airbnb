@@ -3,8 +3,11 @@
 import Container from '@/components/Container';
 import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
+import getListings from '@/actions/getListings';
 
-const Home = () => {
+const Home = async () => {
+  const listing = await getListings();
+
   const isEmpty = true;
 
   if (isEmpty) {
