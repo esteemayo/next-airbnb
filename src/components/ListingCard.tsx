@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import useCountries from '@/hooks/useCountries';
 interface ListingCardProps {
   listing: object;
   reservation: string;
