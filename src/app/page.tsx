@@ -1,14 +1,14 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import Container from '@/components/Container';
 import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
-import getListings from '@/actions/getListings';
+import { getListings } from '@/services/listingService';
 
 const Home = async () => {
-  const listings = await getListings();
-
-  const isEmpty = true;
+  const [listings, setListings] = useState([]);
 
   if (listings.length === 0) {
     return (
@@ -17,6 +17,19 @@ const Home = async () => {
       </ClientOnly>
     );
   }
+
+  const fetchListings = async () => {
+    try {
+      const { data } = await getListings();
+      setListings(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchListings();
+  }, []);
 
   return (
     <ClientOnly>
