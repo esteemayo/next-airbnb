@@ -1,7 +1,6 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-
 interface ListingCardProps {
   listing: object;
   reservation: string;
@@ -19,6 +18,8 @@ const ListingCard: React.FC<ListingCardProps> = ({
   actionLabel,
   actionId
  }) => {
+  const router = useRouter();
+
   return <div>ListingCard</div>;
 };
 
