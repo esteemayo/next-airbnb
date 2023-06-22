@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import useCountries from '@/hooks/useCountries';
 interface ListingCardProps {
-  listing: object;
+  data: object;
   reservation: string;
   onAction?(id: string): void;
   disabled?: boolean;
@@ -12,7 +12,7 @@ interface ListingCardProps {
 }
 
 const ListingCard: React.FC<ListingCardProps> = ({
-  listing,
+  data,
   reservation,
   onAction,
   disabled,
@@ -21,6 +21,8 @@ const ListingCard: React.FC<ListingCardProps> = ({
  }) => {
   const router = useRouter();
   const { getByValue } = useCountries();
+
+  const location = getByValue(data.locationValue);
 
   return <div>ListingCard</div>;
 };
