@@ -10,14 +10,6 @@ import { getListings } from '@/services/listingService';
 const Home = async () => {
   const [listings, setListings] = useState([]);
 
-  if (listings.length === 0) {
-    return (
-      <ClientOnly>
-        <EmptyState showReset />
-      </ClientOnly>
-    );
-  }
-
   const fetchListings = async () => {
     try {
       const { data } = await getListings();
@@ -30,6 +22,14 @@ const Home = async () => {
   useEffect(() => {
     fetchListings();
   }, []);
+
+  if (listings.length === 0) {
+    return (
+      <ClientOnly>
+        <EmptyState showReset />
+      </ClientOnly>
+    );
+  }
 
   return (
     <ClientOnly>
