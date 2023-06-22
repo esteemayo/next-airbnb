@@ -7,12 +7,13 @@ import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
 import { getListings } from '@/services/listingService';
 
-const Home = async () => {
+const Home = () => {
   const [listings, setListings] = useState([]);
 
   const fetchListings = async () => {
     try {
       const { data } = await getListings();
+      console.log(data);
       setListings(data);
     } catch (err) {
       console.log(err);
