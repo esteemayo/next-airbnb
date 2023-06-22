@@ -20,7 +20,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
   disabled,
   actionLabel,
   actionId = '',
- }) => {
+}) => {
   const router = useRouter();
   const { getByValue } = useCountries();
 
@@ -39,13 +39,22 @@ const ListingCard: React.FC<ListingCardProps> = ({
     [onAction, actionId, disabled]
   );
 
-  const price = useMemo(()=>{
+  const price = useMemo(() => {
     if (reservation) {
       return reservation.totalPrice;
     }
 
     return data.price;
   }, [reservation, data.price]);
+
+  const reservationDate = useMemo(() => {
+    if (!reservation) {
+      return null;
+    }
+
+    const start = new Date(reservation.startDate);
+    const end = new Date(reservation.endDate);
+  }, [reservation]);
 
   return <div>ListingCard</div>;
 };
