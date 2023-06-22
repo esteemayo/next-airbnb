@@ -2,6 +2,7 @@
 
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+
 import useCountries from '@/hooks/useCountries';
 interface ListingCardProps {
   data: object;
