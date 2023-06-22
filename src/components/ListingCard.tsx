@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useMemo } from 'react';
+import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
 
 import useCountries from '@/hooks/useCountries';
@@ -54,6 +55,8 @@ const ListingCard: React.FC<ListingCardProps> = ({
 
     const start = new Date(reservation.startDate);
     const end = new Date(reservation.endDate);
+
+    return `${format(start, 'PP')} - ${format(end, 'PP')}`;
   }, [reservation]);
 
   return <div>ListingCard</div>;
