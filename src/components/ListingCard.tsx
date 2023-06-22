@@ -3,6 +3,7 @@
 import { useCallback, useMemo } from 'react';
 import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 import useCountries from '@/hooks/useCountries';
 interface ListingCardProps {
@@ -59,7 +60,23 @@ const ListingCard: React.FC<ListingCardProps> = ({
     return `${format(start, 'PP')} - ${format(end, 'PP')}`;
   }, [reservation]);
 
-  return <div>ListingCard</div>;
+  return (
+    <div
+      onClick={() => router.push(`/listings/${data._id}`)}
+      className='col-span-1 cursor-pointer group'
+    >
+      <div className='flex flex-col gap-2 w-full'>
+        <div className='aspect-square w-full relative overflow-hidden rounded-xl'>
+          <Image
+            src={data.imageSrc}
+            fill
+            alt='listing'
+            className='object-cover h-full w-full group-hover:scale-110 transition'
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ListingCard;
