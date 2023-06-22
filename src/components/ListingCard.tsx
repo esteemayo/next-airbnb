@@ -5,7 +5,9 @@ import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
+import HeartButton from './HeartButton';
 import useCountries from '@/hooks/useCountries';
+
 interface ListingCardProps {
   data: object;
   reservation: string;
@@ -73,6 +75,9 @@ const ListingCard: React.FC<ListingCardProps> = ({
             alt='listing'
             className='object-cover h-full w-full group-hover:scale-110 transition'
           />
+          <div className='absolute top-3 right-3'>
+            <HeartButton listingId={data._id} />
+          </div>
         </div>
       </div>
     </div>
