@@ -1,5 +1,7 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
 interface ListingCardProps {
   listing: object;
   reservation: string;
