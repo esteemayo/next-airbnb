@@ -9,7 +9,14 @@ interface ListingCardProps {
   actionId?: string;
 }
 
-const ListingCard: React.FC<ListingCardProps> = ({ listing }) => {
+const ListingCard: React.FC<ListingCardProps> = ({
+  listing,
+  reservation,
+  onAction,
+  disabled,
+  actionLabel,
+  actionId
+ }) => {
   return <div>ListingCard</div>;
 };
 
