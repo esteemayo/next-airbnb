@@ -35,7 +35,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
       }
 
       onAction?.(actionId);
-    }, [onAction, actionId]);
+    }, [onAction, actionId, disabled]);
 
   return <div>ListingCard</div>;
 };
