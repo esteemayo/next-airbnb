@@ -49,7 +49,7 @@ export const options = {
             email: user.email,
             image: user.image,
           };
-        } catch (err) {
+        } catch (err: any) {
           throw new Error(err);
         }
       },
