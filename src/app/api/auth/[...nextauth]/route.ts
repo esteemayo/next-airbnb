@@ -40,7 +40,7 @@ export const options: NextAuthOptions = {
         },
       },
       // @ts-ignore
-      async authorize<ILogin>(credentials) {
+      async authorize(credentials) {
         await connectDB();
         const { email, password } = credentials;
 
