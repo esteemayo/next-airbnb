@@ -39,6 +39,7 @@ export const options: NextAuthOptions = {
           placeholder: '********',
         },
       },
+      // @ts-ignore
       async authorize<ILogin>(credentials) {
         await connectDB();
         const { email, password } = credentials;
