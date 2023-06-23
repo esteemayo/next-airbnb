@@ -7,13 +7,6 @@ import GoogleProvider from 'next-auth/providers/google';
 import User from '@/models/User';
 import connectDB from '@/utils/db';
 
-interface ILogin {
-  id: string;
-  email: string;
-  password: string;
-  image: string;
-}
-
 export const options: NextAuthOptions = {
   providers: [
     GithubProvider({
