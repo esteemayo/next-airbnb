@@ -21,7 +21,11 @@ export const options: NextAuthOptions = {
       id: 'credentials',
       name: 'Credentials',
       credentials: {
-        email: { label: 'email', type: 'email' },
+        email: {
+          label: 'email',
+          type: 'email',
+          placeholder: 'user@email.com',
+        },
         password: {
           label: 'password',
           type: 'password',
