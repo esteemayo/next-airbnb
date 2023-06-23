@@ -1,13 +1,13 @@
 import GithubProvider from 'next-auth/providers/github';
 import bcrypt from 'bcryptjs';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import NextAuth from 'next-auth';
+import NextAuth, { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 
 import User from '@/models/User';
 import connectDB from '@/utils/db';
 
-export const options = {
+export const options: NextAuthOptions = {
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
