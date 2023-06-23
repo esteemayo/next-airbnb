@@ -43,7 +43,12 @@ export const options = {
             throw new Error('Invalid credentials!');
           }
 
-          return user;
+          return {
+            id: user._id,
+            name: user.name,
+            email: user.email,
+            image: user.image,
+          };
         } catch (err) {
           throw new Error(err);
         }
