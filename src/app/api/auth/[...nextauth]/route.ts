@@ -22,7 +22,11 @@ export const options: NextAuthOptions = {
       name: 'Credentials',
       credentials: {
         email: { label: 'email', type: 'email' },
-        password: { label: 'password', type: 'password' },
+        password: {
+          label: 'password',
+          type: 'password',
+          placeholder: '********',
+        },
       },
       async authorize(credentials) {
         await connectDB();
