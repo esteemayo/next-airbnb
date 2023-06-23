@@ -7,6 +7,13 @@ import GoogleProvider from 'next-auth/providers/google';
 import User from '@/models/User';
 import connectDB from '@/utils/db';
 
+interface ILogin {
+  id: string;
+  email: string;
+  password: string;
+  image: string;
+}
+
 export const options: NextAuthOptions = {
   providers: [
     GithubProvider({
@@ -32,7 +39,7 @@ export const options: NextAuthOptions = {
           placeholder: '********',
         },
       },
-      async authorize(credentials) {
+      async authorize<ILogin>(credentials) {
         await connectDB();
         const { email, password } = credentials;
 
