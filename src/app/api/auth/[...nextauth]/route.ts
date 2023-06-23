@@ -7,7 +7,7 @@ import GoogleProvider from 'next-auth/providers/google';
 import User from '@/models/User';
 import connectDB from '@/utils/db';
 
-const handler = NextAuth({
+const options = {
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
@@ -59,6 +59,8 @@ const handler = NextAuth({
     strategy: 'jwt',
   },
   secret: process.env.NEXTAUTH_SECRET,
-});
+};
+
+const handler = NextAuth(options);
 
 export { handler as GET, handler as POST };
