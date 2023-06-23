@@ -7,7 +7,7 @@ import GoogleProvider from 'next-auth/providers/google';
 import User from '@/models/User';
 import connectDB from '@/utils/db';
 
-const options = {
+export const options = {
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
