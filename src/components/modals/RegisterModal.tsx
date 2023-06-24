@@ -41,6 +41,7 @@ const RegisterModal = () => {
     try {
       await registerUser(data);
       registerModal.onClose();
+      reset();
     } catch (err) {
       toast.error('Something went wrong.');
     } finally {
