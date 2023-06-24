@@ -28,19 +28,9 @@ export const POST = async (request: Request) => {
     const user = await User.create({ ...newUser });
 
     if (user) {
-      return NextResponse.json(
-        {
-          user: {
-            id: user._id,
-            name: user.name,
-            email: user.email,
-            image: user.image,
-          },
-        },
-        {
-          status: 201,
-        }
-      );
+      return NextResponse.json(user, {
+        status: 201,
+      });
     }
   } catch (err) {
     return NextResponse.json(err, {
