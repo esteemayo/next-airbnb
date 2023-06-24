@@ -1,7 +1,7 @@
 'use client';
 
 import { toast } from 'react-hot-toast';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import ClientOnly from '@/components/ClientOnly';
 import { getListing } from '@/services/listingService';
@@ -12,22 +12,21 @@ interface IParams {
   listingId?: string;
 }
 
-const ListingPage = ({ params }: { params: IParams }) => {
-  const { listingId } = params;
+const ListingPage = ({ params: { listingId } }: { params: IParams }) => {
   const [listing, setListing] = useState({});
 
-  const fetchListing = async () => {
+  const fetchListing = useCallback(async () => {
     try {
       const { data } = await getListing(listingId);
       setListing(data);
     } catch (err: any) {
       toast.error(err.response.data.message);
     }
-  };
+  }, [listingId]);
 
   useEffect(() => {
     listingId && fetchListing();
-  }, [listingId]);
+  }, [listingId, fetchListing]);
 
   if (!listing) {
     return (
