@@ -44,3 +44,36 @@ export const POST = async (
     });
   }
 };
+
+export const DELETE = async (
+  request: Request,
+  { params }: { params: IParams }
+) => {
+  try {
+    await connectDB();
+
+    const currentUser = await getLoggedInUser();
+
+    if (!currentUser) {
+      return NextResponse.error();
+    }
+
+    const { listingId } = params;
+
+    if (!listingId || typeof listingId !== 'string') {
+      throw new Error('Invalid ID');
+    }
+
+    let user = await User.findOne({ email: currentUser.email });
+
+    let favoriteIds = [...(user.favoriteIds || [])];
+
+    favoriteIds.filter((id) => id !== listingId);
+
+    user = await User.findByIdAndUpdate(user._id, { $set: { favoriteIds } });
+  } catch (err: any) {
+    return NextResponse.json(err.message, {
+      status: 500,
+    });
+  }
+};
