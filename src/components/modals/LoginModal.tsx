@@ -28,6 +28,7 @@ const LoginModal = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FieldValues>({
     defaultValues: {
       email: '',
