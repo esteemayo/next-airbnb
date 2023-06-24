@@ -64,6 +64,12 @@ export const OPTIONS: NextAuthOptions = {
           throw new Error(err);
         }
       },
+      callbacks: {
+        session: async (session: any, user: any) => {
+          session.user.id = user._id;
+          return Promise.resolve(session);
+        },
+      },
     }),
   ],
   pages: {
