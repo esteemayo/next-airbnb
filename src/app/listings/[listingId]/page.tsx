@@ -4,9 +4,10 @@ import { toast } from 'react-hot-toast';
 import { useCallback, useEffect, useState } from 'react';
 
 import ClientOnly from '@/components/ClientOnly';
-import { getListing } from '@/services/listingService';
-import ListingClient from './ListingClient';
 import EmptyState from '@/components/EmptyState';
+
+import ListingClient from './ListingClient';
+import { getListing } from '@/services/listingService';
 
 interface IParams {
   listingId?: string;
