@@ -35,7 +35,10 @@ export const options: NextAuthOptions = {
       // @ts-ignore
       async authorize(credentials) {
         await connectDB();
-        const { email, password } = credentials;
+        const { email, password } = credentials as {
+          email: string;
+          password: string;
+        };
 
         try {
           if (!email || !password) {
