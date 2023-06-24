@@ -4,6 +4,7 @@ import { useCallback, useMemo } from 'react';
 import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
 
 import HeartButton from './HeartButton';
 import useCountries from '@/hooks/useCountries';
@@ -27,8 +28,10 @@ const ListingCard: React.FC<ListingCardProps> = ({
   actionId = '',
 }) => {
   const router = useRouter();
+  const session = useSession();
   const { getByValue } = useCountries();
 
+  const currentUser = session.data?.user?.email;
   const location = getByValue(data.locationValue);
 
   const handleCancel = useCallback(
@@ -77,7 +80,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
             className='object-cover h-full w-full group-hover:scale-110 transition'
           />
           <div className='absolute top-3 right-3'>
-            <HeartButton listingId={data._id} />
+            <HeartButton listingId={data._id} currentUser={currentUser} />
           </div>
         </div>
         <div className='font-semibold text-lg'>
