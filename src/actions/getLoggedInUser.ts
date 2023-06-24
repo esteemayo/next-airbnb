@@ -1,8 +1,8 @@
 import { getServerSession } from 'next-auth/next';
-import { options } from '@/app/api/auth/[...nextauth]/route';
+import { OPTIONS } from '@/app/api/auth/[...nextauth]/route';
 
 export async function getLoggedInUser() {
-  const session = await getServerSession(options);
+  const session = await getServerSession(OPTIONS);
   console.log(session.user);
   const user = session.user;
   return user;
