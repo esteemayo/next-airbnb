@@ -71,6 +71,10 @@ export const DELETE = async (
     favoriteIds.filter((id) => id !== listingId);
 
     user = await User.findByIdAndUpdate(user._id, { $set: { favoriteIds } });
+
+    return NextResponse.json(user, {
+      status: 200,
+    });
   } catch (err: any) {
     return NextResponse.json(err.message, {
       status: 500,
