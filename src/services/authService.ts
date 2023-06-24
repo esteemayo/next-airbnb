@@ -8,5 +8,5 @@ interface RegisterInput {
   password: string;
 }
 
-export const registerUser = (credentials: RegisterInput) =>
+export const registerUser = (credentials: any) =>
   http.post(apiEndpoint, credentials);
