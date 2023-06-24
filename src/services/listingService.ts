@@ -2,7 +2,7 @@ import http from './httpService';
 
 const apiEndpoint = '/listings';
 
-const listingUrl = (listingId) => `${apiEndpoint}/${listingId}`;
+const listingUrl = (listingId: string) => `${apiEndpoint}/${listingId}`;
 
 export const getListings = () => http.get(apiEndpoint);
 
