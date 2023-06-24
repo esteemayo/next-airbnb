@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 import ClientOnly from '@/components/ClientOnly';
 import { getListing } from '@/services/listingService';
+import ListingClient from './ListingClient';
 import EmptyState from '@/components/EmptyState';
 
 interface IParams {
@@ -12,8 +13,8 @@ interface IParams {
 }
 
 const ListingPage = ({ params }: { params: IParams }) => {
-  const [listing, setListing] = useState({});
   const { listingId } = params;
+  const [listing, setListing] = useState({});
 
   const fetchListing = async () => {
     try {
@@ -36,7 +37,11 @@ const ListingPage = ({ params }: { params: IParams }) => {
     );
   }
 
-  return <div>{listing?.title}</div>;
+  return (
+    <ClientOnly>
+      <ListingClient listing={listing} />
+    </ClientOnly>
+  );
 };
 
 export default ListingPage;
