@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 
 import Heading from '../Heading';
@@ -29,6 +30,14 @@ const ListingHead: React.FC<ListingHeadProps> = ({
         title={title}
         subtitle={`${location?.region}, ${location?.label}`}
       />
+      <div className='w-full h-[60vh] overflow-hidden rounded-xl relative'>
+        <Image
+          src={imageSrc}
+          fill
+          alt='Image'
+          className='object-cover w-full'
+        />
+      </div>
     </>
   );
 };
