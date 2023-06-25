@@ -3,6 +3,7 @@
 import { IconType } from 'react-icons';
 import Avatar from '../Avatar';
 import useCountries from '@/hooks/useCountries';
+import ListingCategory from './ListingCategory';
 
 interface ListingInfoProps {
   user: string;
@@ -52,6 +53,13 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
         </div>
       </div>
       <hr />
+      {category && (
+        <ListingCategory
+          icon={category.icon}
+          label={category.label}
+          description={category.description}
+        />
+      )}
     </div>
   );
 };
