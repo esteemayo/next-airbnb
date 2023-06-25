@@ -43,6 +43,9 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
           <div>
             {guestCount} guests
           </div>
+          <div>
+            {roomCount} rooms
+          </div>
         </div>
       </div>
     </div>
