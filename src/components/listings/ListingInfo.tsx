@@ -1,6 +1,7 @@
 'use client';
 
 import { IconType } from 'react-icons';
+import Avatar from '../Avatar';
 import useCountries from '@/hooks/useCountries';
 
 interface ListingInfoProps {
