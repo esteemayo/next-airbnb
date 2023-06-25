@@ -8,7 +8,7 @@ interface ListingCategoryProps {
   description: string;
 }
 
-const ListingCategory = () => {
+const ListingCategory: React.FC<ListingCategoryProps> = ({ icon: Icon, label, description }) => {
   return (
     <div>
       ListingCategory
