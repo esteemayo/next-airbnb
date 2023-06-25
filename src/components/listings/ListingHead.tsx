@@ -5,7 +5,6 @@ import { useSession } from 'next-auth/react';
 
 import Heading from '../Heading';
 import HeartButton from '../HeartButton';
-
 import useCountries from '@/hooks/useCountries';
 
 interface ListingHeadProps {
@@ -40,7 +39,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
           className='object-cover w-full'
         />
         <div className='absolute top-5 right-5'>
-          <HeartButton />
+          <HeartButton listingId={id} currentUser={session} />
         </div>
       </div>
     </>
