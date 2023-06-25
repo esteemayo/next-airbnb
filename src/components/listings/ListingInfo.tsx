@@ -1,9 +1,14 @@
 'use client';
 
 import { IconType } from 'react-icons';
+import { dynamic } from 'next/dynamic';
 import Avatar from '../Avatar';
 import useCountries from '@/hooks/useCountries';
 import ListingCategory from './ListingCategory';
+
+const Map = dynamic(() => import('../Map'), {
+  ssr: false,
+});
 
 interface ListingInfoProps {
   user: string;
