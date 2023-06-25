@@ -60,6 +60,7 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
           description={category.description}
         />
       )}
+      <hr />
     </div>
   );
 };
