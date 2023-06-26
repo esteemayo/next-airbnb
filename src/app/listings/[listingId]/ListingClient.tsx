@@ -25,6 +25,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
   reservations = [],
   listing,
 }) => {
+  const router = useRouter();
   const session = useSession();
   const loginModal = useLoginModal();
 
