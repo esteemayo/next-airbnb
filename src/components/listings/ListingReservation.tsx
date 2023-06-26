@@ -27,6 +27,7 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
         <div className='text-2xl font-semibold'>$ {price}</div>
         <div className='font-light text-neutral-500'>night</div>
       </div>
+      <hr />
     </div>
   );
 };
