@@ -16,4 +16,4 @@ const Calendar: React.FC<CalendarProps> = ({ value, onChange, disabledDates }) =
   );
 };
 
-export const Calendar;
+export default Calendar;
