@@ -5,9 +5,15 @@ import { useSession } from 'next-auth/react';
 
 import Container from '@/components/Container';
 import { categories } from '@/data';
-
+import useLoginModal from '@/hooks/useLoginModal';
 import ListingHead from '@/components/listings/ListingHead';
 import ListingInfo from '@/components/listings/ListingInfo';
+
+const initialDateRange = {
+  startDate: new Date(),
+  endDate: new Date(),
+  key: 'selection',
+};
 
 interface ListingClientProps {
   reservations?: Array;
@@ -15,10 +21,11 @@ interface ListingClientProps {
 }
 
 const ListingClient: React.FC<ListingClientProps> = ({
-  reservations,
+  reservations = [],
   listing,
 }) => {
   const session = useSession();
+  const loginModal = useLoginModal();
 
   const category = useMemo(() => {
     return categories.find((item) => item.label === listing.category);
