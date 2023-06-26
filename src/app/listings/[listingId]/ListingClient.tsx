@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { eachDayOfInterval } from 'date-fns';
+import { differenceInDays, eachDayOfInterval } from 'date-fns';
 import { toast } from 'react-hot-toast';
 
 import ListingHead from '@/components/listings/ListingHead';
@@ -81,6 +81,18 @@ const ListingClient: React.FC<ListingClientProps> = ({
   const category = useMemo(() => {
     return categories.find((item) => item.label === listing.category);
   }, [listing.category]);
+
+  useEffect(() => {
+    if (dateRange.startDate && dateRange.endDate) {
+      const dayCount = differenceInDays(dateRange.endDate, dateRange.startDate);
+
+      if (dayCount && listing.price) {
+        setTotalPrice(dayCount * listing.price);
+      } else {
+        setTotalPrice(listing.price);
+      }
+    }
+  }, [dateRange, listing.price]);
 
   return (
     <Container>
