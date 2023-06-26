@@ -55,10 +55,13 @@ const ListingClient: React.FC<ListingClientProps> = ({
     try {
       await createReservation(newReservation);
       toast.success('Listing reserved!');
+      router.refresh();
     } catch (err: any) {
-      console.log(err);
+      toast.error('Something went wrong.');
+    } finally {
+      setIsLoading(false);
     }
-  }, []);
+  }, [dateRange, listing, loginModal, session, totalPrice, router]);
 
   const disabledDates = useMemo(() => {
     let dates: Date[] = [];
