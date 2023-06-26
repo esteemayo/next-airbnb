@@ -29,6 +29,11 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
         <div className='font-light text-neutral-500'>night</div>
       </div>
       <hr />
+      <Calendar
+        value={dateRange}
+        disabledDates={disabledDates}
+        onChange={(value) =>onChangeDate(value.selection)}
+      />
     </div>
   );
 };
