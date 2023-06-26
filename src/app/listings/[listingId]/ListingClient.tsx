@@ -8,6 +8,7 @@ import { toast } from 'react-hot-toast';
 
 import ListingHead from '@/components/listings/ListingHead';
 import Container from '@/components/Container';
+import ListingReservation from '@/components/listings/ListingReservation';
 import ListingInfo from '@/components/listings/ListingInfo';
 
 import { categories } from '@/data';
@@ -117,6 +118,9 @@ const ListingClient: React.FC<ListingClientProps> = ({
               bathroomCount={listing.bathroomCount}
               locationValue={listing.locationValue}
             />
+            <div className='order-first mb-10 md:order-last md:col-span-3'>
+              
+            </div>
           </div>
         </div>
       </div>
