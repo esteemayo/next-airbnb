@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 import Container from '@/components/Container';
 import { categories } from '@/data';
