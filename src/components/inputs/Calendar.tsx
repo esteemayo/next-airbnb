@@ -1,6 +1,6 @@
 'use client';
 
-import { Range, RangeKeyDict } from 'react-date-range';
+import { DateRange, Range, RangeKeyDict } from 'react-date-range';
 
 interface CalendarProps {
   value: Range,
