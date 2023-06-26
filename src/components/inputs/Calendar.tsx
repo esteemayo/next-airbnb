@@ -8,7 +8,7 @@ interface CalendarProps {
   disabledDates?: Date[];
 }
 
-const Calendar = () => {
+const Calendar: React.FC<CalendarProps> = ({ value, onChange, disabledDates }) => {
   return (
     <div>
       Calendar
