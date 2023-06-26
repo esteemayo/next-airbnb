@@ -10,6 +10,7 @@ import Container from '@/components/Container';
 import ListingInfo from '@/components/listings/ListingInfo';
 
 import { categories } from '@/data';
+import { createReservation } from '@/services/reservationService';
 import useLoginModal from '@/hooks/useLoginModal';
 
 const initialDateRange = {
@@ -35,6 +36,27 @@ const ListingClient: React.FC<ListingClientProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(listing.price);
   const [dateRange, setDateRange] = useState(initialDateRange);
+
+  const onCreateReservation = useCallback(async () => {
+    if (session.status === 'unauthenticated') {
+      return loginModal.onOpen();
+    }
+
+    setIsLoading(true);
+
+    const newReservation = {
+      totalPrice,
+      startDate: dateRange.startDate,
+      endDate: dateRange.endDate,
+      listing: listing?._id,
+    };
+
+    try {
+      await createReservation(newReservation);
+    } catch (err: any) {
+      console.log(err);
+    }
+  }, []);
 
   const disabledDates = useMemo(() => {
     let dates: Date[] = [];
