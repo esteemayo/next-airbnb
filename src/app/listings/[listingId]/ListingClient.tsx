@@ -34,6 +34,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
 
   const [isLoading, setIsLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(listing.price);
+  const [dateRange, setDateRange] = useState(initialDateRange);
 
   const disabledDates = useMemo(() => {
     let dates: Date[] = [];
