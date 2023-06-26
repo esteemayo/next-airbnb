@@ -4,11 +4,12 @@ import { useMemo } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
+import ListingHead from '@/components/listings/ListingHead';
 import Container from '@/components/Container';
+import ListingInfo from '@/components/listings/ListingInfo';
+
 import { categories } from '@/data';
 import useLoginModal from '@/hooks/useLoginModal';
-import ListingHead from '@/components/listings/ListingHead';
-import ListingInfo from '@/components/listings/ListingInfo';
 
 const initialDateRange = {
   startDate: new Date(),
