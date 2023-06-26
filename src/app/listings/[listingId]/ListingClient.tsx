@@ -27,6 +27,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
 }) => {
   const router = useRouter();
   const session = useSession();
+
   const loginModal = useLoginModal();
 
   const category = useMemo(() => {
