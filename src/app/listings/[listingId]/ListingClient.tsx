@@ -3,6 +3,7 @@
 import { useMemo } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import { eachDayOfInterval } from 'date-fns';
 
 import ListingHead from '@/components/listings/ListingHead';
 import Container from '@/components/Container';
@@ -30,6 +31,21 @@ const ListingClient: React.FC<ListingClientProps> = ({
   const session = useSession();
 
   const loginModal = useLoginModal();
+
+  const disabledDates = useMemo(() => {
+    let dates: Date[] = [];
+
+    reservations.forEach((reservation: any) => {
+      const range = eachDayOfInterval({
+        start: new Date(reservation.startDate),
+        end: new Date(reservation.endDate),
+      });
+
+      dates = [...dates, ...range];
+    });
+
+    return dates;
+  }, [reservations]);
 
   const category = useMemo(() => {
     return categories.find((item) => item.label === listing.category);
