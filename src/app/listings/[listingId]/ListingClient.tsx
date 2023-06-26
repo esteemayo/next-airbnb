@@ -4,6 +4,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { eachDayOfInterval } from 'date-fns';
+import { toast } from 'react-hot-toast';
 
 import ListingHead from '@/components/listings/ListingHead';
 import Container from '@/components/Container';
