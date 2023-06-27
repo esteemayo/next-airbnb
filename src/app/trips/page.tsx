@@ -26,7 +26,7 @@ const TripsPage = () => {
 
   useEffect(() => {
     fetchReservations();
-  }, [fetchReservation]);
+  }, [fetchReservations]);
 
   if (session.status === 'unauthenticated') {
     return (
