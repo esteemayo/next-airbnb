@@ -20,6 +20,10 @@ const TripsPage = () => {
     }
   }, []);
 
+  useEffect(() => {
+    fetchReservations();
+  }, []);
+
   if (session.status === 'unauthenticated') {
     return (
       <ClientOnly>
