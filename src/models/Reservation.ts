@@ -24,12 +24,14 @@ const reservationSchema = new Schema<ReservationModel>(
       required: [true, 'A reservation must have a total price'],
     },
     user: {
-      type: mongoose.Types.ObjectId,
-      ref: 'User',
+      type: String,
+      // type: mongoose.Types.ObjectId,
+      // ref: 'User',
     },
     listing: {
-      type: mongoose.Types.ObjectId,
-      ref: 'Listing',
+      type: Array,
+      // type: mongoose.Types.ObjectId,
+      // ref: 'Listing',
     },
   },
   {
