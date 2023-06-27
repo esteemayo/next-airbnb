@@ -8,6 +8,7 @@ import EmptyState from '@/components/EmptyState';
 
 const TripsPage = () => {
   const session = useSession();
+  const [reservations, setReservations] = useState([]);
 
   if (session.status === 'unauthenticated') {
     return (
