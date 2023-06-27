@@ -7,6 +7,8 @@ import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
 import { getReservations } from '@/services/reservationService';
 
+import TripsClient from './TripsClient';
+
 const TripsPage = () => {
   const session = useSession();
   const [reservations, setReservations] = useState([]);
@@ -47,9 +49,11 @@ const TripsPage = () => {
   }
 
   return (
-    <div>
-      TripsPage
-    </div>
+    <ClientOnly>
+      <TripsClient
+        reservations={reservations}
+      />
+    </ClientOnly>
   );
 };
 
