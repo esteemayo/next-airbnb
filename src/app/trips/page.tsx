@@ -13,9 +13,11 @@ const TripsPage = () => {
   const session = useSession();
   const [reservations, setReservations] = useState([]);
 
+  const user = session?.data?.user.email;
+
   const fetchReservations = useCallback(async () => {
     try {
-      const { data } = await getReservations({ user: session?.data?.user.email });
+      const { data } = await getReservations(user);
       setReservation(data);
     } catch (err: any) {
       console.log(err);
@@ -29,10 +31,7 @@ const TripsPage = () => {
   if (session.status === 'unauthenticated') {
     return (
       <ClientOnly>
-        <EmptyState
-          title='Unauthorized'
-          subtitle='Please login'
-        />
+        <EmptyState title='Unauthorized' subtitle='Please login' />
       </ClientOnly>
     );
   }
@@ -50,9 +49,7 @@ const TripsPage = () => {
 
   return (
     <ClientOnly>
-      <TripsClient
-        reservations={reservations}
-      />
+      <TripsClient reservations={reservations} />
     </ClientOnly>
   );
 };
