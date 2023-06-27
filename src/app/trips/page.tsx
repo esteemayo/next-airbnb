@@ -42,4 +42,4 @@ const TripsPage = () => {
   );
 };
 
-export const TripsPage;
+export default TripsPage;
