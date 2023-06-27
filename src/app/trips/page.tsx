@@ -22,7 +22,7 @@ const TripsPage = () => {
     } catch (err: any) {
       console.log(err);
     }
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     fetchReservations();
