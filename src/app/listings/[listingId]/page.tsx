@@ -7,6 +7,7 @@ import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
 
 import ListingClient from './ListingClient';
+import { getReservations } from '@/services/reservationService';
 import { getListing } from '@/services/listingService';
 
 interface IParams {
@@ -15,6 +16,7 @@ interface IParams {
 
 const ListingPage = async ({ params }: { params: IParams }) => {
   const [listing, setListing] = useState({});
+  const [reservations, setRersevations] = useState([]);
 
   const fetchListing = useCallback(async () => {
     try {
@@ -24,6 +26,15 @@ const ListingPage = async ({ params }: { params: IParams }) => {
       toast.error(err.response.data.message);
     }
   }, [params.listingId]);
+
+  const fetchReservation = useCallback(async () => {
+    try {
+      const { data } = await getReservations(params);
+      setReservations(data);
+    } catch (err: any) {
+      toast.error(err.response.data.message);
+    }
+  }, [params]);
 
   useEffect(() => {
     params.listingId && fetchListing();
