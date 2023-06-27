@@ -1,4 +1,5 @@
 import prisma from '@/libs/prismadb';
+
 interface IParams {
   listing?: string;
   user?: string;
