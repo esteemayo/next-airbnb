@@ -25,6 +25,7 @@ export const POST = async (request: Request) => {
     endDate,
     totalPrice,
     listing,
+    user: currentUser.email,
   };
 
   try {
