@@ -40,6 +40,10 @@ const ListingPage = async ({ params }: { params: IParams }) => {
     params.listingId && fetchListing();
   }, [params.listingId, fetchListing]);
 
+  useEffect(() => {
+    params && fetchReservation();
+  }, [params, fetchReservation]);
+
   if (!listing) {
     return (
       <ClientOnly>
