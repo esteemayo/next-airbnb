@@ -8,6 +8,17 @@ import EmptyState from '@/components/EmptyState';
 const TripsPage = () => {
   const session = useSession();
 
+  if (session.status === 'unauthenticated') {
+    return (
+      <ClientOnly>
+        <EmptyState
+          title='Unauthorized'
+          subtitle='Please login'
+        />
+      </ClientOnly>
+    );
+  }
+
   return (
     <div>
       TripsPage
