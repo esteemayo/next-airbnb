@@ -37,7 +37,11 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
       />
       <hr />
       <div className='p-4'>
-        <Button/>
+        <Button
+          label='Reserve'
+          disabled={disabled}
+          onClick={onSubmit}
+        />
       </div>
       <div classname='p-4 flex flex-row items-center justify-between font-semibold text-lg'>
         <div>Total</div>
