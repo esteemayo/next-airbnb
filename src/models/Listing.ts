@@ -59,8 +59,9 @@ const listingSchema = new Schema<ListingModel>(
       ref: 'User',
     },
     reservations: {
-      type: mongoose.Types.ObjectId,
-      ref: 'Reservation',
+      type: [String],
+      // type: mongoose.Types.ObjectId,
+      // ref: 'Reservation',
     },
   },
   {

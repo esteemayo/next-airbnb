@@ -8,17 +8,19 @@ import EmptyState from '@/components/EmptyState';
 
 import ListingClient from './ListingClient';
 import { getListing } from '@/services/listingService';
+import getReservations from '@/actions/getReservations';
 
 interface IParams {
   listingId?: string;
 }
 
-const ListingPage = ({ params: { listingId } }: { params: IParams }) => {
+const ListingPage = async ({ params }: { params: IParams }) => {
+  const reservations = await getReservations(params);
   const [listing, setListing] = useState({});
 
   const fetchListing = useCallback(async () => {
     try {
-      const { data } = await getListing(listingId);
+      const { data } = await getListing(params.listingId);
       setListing(data);
     } catch (err: any) {
       toast.error(err.response.data.message);
