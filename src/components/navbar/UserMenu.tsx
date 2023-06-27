@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from 'react';
 import { signOut, useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 import useLoginModal from '@/hooks/useLoginModal';
@@ -12,6 +13,7 @@ import Avatar from '../Avatar';
 import MenuItem from './MenuItem';
 
 const UserMenu = () => {
+  const router = useRouter();
   const session = useSession();
 
   const loginModal = useLoginModal();
