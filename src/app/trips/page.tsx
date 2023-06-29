@@ -1,7 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
+import { useCallback, useEffect, useState } from 'react';
 
 import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
