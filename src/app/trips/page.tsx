@@ -18,7 +18,7 @@ const TripsPage = () => {
   const fetchReservations = useCallback(async () => {
     try {
       const { data } = await getReservations(user);
-      setReservation(data);
+      setReservations(data);
     } catch (err: any) {
       console.log(err);
     }
