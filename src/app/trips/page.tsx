@@ -49,7 +49,10 @@ const TripsPage = () => {
 
   return (
     <ClientOnly>
-      <TripsClient reservations={reservations} currentUser={session} />
+      <TripsClient
+        reservations={reservations}
+        currentUser={session}
+      />
     </ClientOnly>
   );
 };
