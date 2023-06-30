@@ -1,5 +1,7 @@
 'use client';
 
+import Container from '@/components/Container';
+
 interface TripsClientProps {
   reservation: [];
   currentUser?: object | null;
@@ -8,9 +10,9 @@ interface TripsClientProps {
 const TripsClient: React.FC<TripsClientProps> = ({ reservation, currentUser }) => {
   
   return (
-    <div>
+    <Container>
       TripsClient
-    </div>
+    </Container>
   );
 };
 
