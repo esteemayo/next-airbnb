@@ -1,6 +1,12 @@
 'use client';
 
-const TripsClient = () => {
+interface TripsClientProps {
+  reservation: [];
+  currentUser?: object | null;
+}
+
+const TripsClient: React.FC<TripsClientProps> = ({ reservation, currentUser }) => {
+  
   return (
     <div>
       TripsClient
