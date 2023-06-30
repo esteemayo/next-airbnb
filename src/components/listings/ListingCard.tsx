@@ -6,9 +6,9 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 
-import HeartButton from './HeartButton';
+import HeartButton from '../HeartButton';
 import useCountries from '@/hooks/useCountries';
-import Button from './Button';
+import Button from '../Button';
 
 interface ListingCardProps {
   data: object;
