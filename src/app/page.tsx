@@ -6,7 +6,7 @@ import Container from '@/components/Container';
 import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
 import { getListings } from '@/services/listingService';
-import ListingCard from '@/components/ListingCard';
+import ListingCard from '@/components/listings/ListingCard';
 
 const Home = () => {
   const [listings, setListings] = useState([]);
