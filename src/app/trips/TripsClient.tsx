@@ -10,30 +10,33 @@ import Container from '@/components/Container';
 import { deleteReservation } from '@/services/reservationService';
 
 interface TripsClientProps {
-  reservation: [];
+  reservations: [];
   currentUser?: object | null;
 }
 
 const TripsClient: React.FC<TripsClientProps> = ({
-  reservation,
+  reservations,
   currentUser,
 }) => {
   const router = useRouter();
   const [deletingId, setDeletingId] = useState('');
 
-  const onCancel = useCallback(async (id: string) => {
-    setDeletingId(id);
+  const onCancel = useCallback(
+    async (id: string) => {
+      setDeletingId(id);
 
-    try {
-      await deleteReservation(id);
-      toast.success('Reservation cancelled');
-      router.refresh();
-    } catch (err: any) {
-      toast.error(err?.response?.data?.error);
-    } finally {
-      detDeletingId('');
-    }
-  }, [router]);
+      try {
+        await deleteReservation(id);
+        toast.success('Reservation cancelled');
+        router.refresh();
+      } catch (err: any) {
+        toast.error(err?.response?.data?.error);
+      } finally {
+        setDeletingId('');
+      }
+    },
+    [router]
+  );
 
   return (
     <Container>
