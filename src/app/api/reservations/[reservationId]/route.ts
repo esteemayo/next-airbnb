@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 import connectDB from '@/utils/db';
-import getLoggedInUser from '@/actions/getLoggedInUser';
+import { getLoggedInUser } from '@/actions/getLoggedInUser';
 import Reservation from '@/models/Reservation';
 
 interface IParams {
