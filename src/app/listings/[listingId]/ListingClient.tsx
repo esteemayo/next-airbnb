@@ -57,7 +57,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
     try {
       await createReservation(newReservation);
       toast.success('Listing reserved!');
-      router.refresh();
+      router.push('/trips');
     } catch (err: any) {
       toast.error('Something went wrong.');
     } finally {
