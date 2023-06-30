@@ -8,7 +8,10 @@ interface IParams {
   reservationId: string;
 }
 
-export const DELETE = async (request, { params }: { params: IParams }) => {
+export const DELETE = async (
+  request: Request,
+  { params }: { params: IParams }
+) => {
   try {
     await connectDB();
 
