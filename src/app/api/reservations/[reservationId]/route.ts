@@ -10,6 +10,8 @@ interface IParams {
 
 export const DELETE = async (request, { params }: { params: IParams }) => {
   try {
+    await connectDB();
+
     const currentUser = await getLoggedInUser();
 
     if (!currentUser) {
