@@ -23,12 +23,9 @@ export const GET = async (request: Request) => {
       })
     );
 
-    return NextResponse.json(
-      { user, favorites },
-      {
-        status: 200,
-      }
-    );
+    return NextResponse.json(favorites, {
+      status: 200,
+    });
   } catch (err: any) {
     return NextResponse.json(err.message, {
       status: 500,
