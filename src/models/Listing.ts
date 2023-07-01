@@ -55,8 +55,9 @@ const listingSchema = new Schema<ListingModel>(
       required: [true, 'A list item must have a price'],
     },
     user: {
-      type: mongoose.Types.ObjectId,
-      ref: 'User',
+      type: String,
+      // type: mongoose.Types.ObjectId,
+      // ref: 'User',
     },
     reservations: {
       type: [String],
