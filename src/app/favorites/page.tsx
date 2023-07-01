@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react';
 
 import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
+
 import { getFavorites } from '@/services/favoriteService';
 
 const ListingPage = () => {
