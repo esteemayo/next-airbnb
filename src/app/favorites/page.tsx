@@ -20,6 +20,10 @@ const ListingPage = () => {
     }
   }, []);
 
+  useEffect(() => {
+    fetchListings();
+  }, [fetchListings]);
+
   return (
     <ClientOnly>
       <EmptyState
