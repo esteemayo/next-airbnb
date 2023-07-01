@@ -2,7 +2,12 @@
 
 import React from 'react';
 
-const FavoritesClient = () => {
+interface FavoritesClientProps {
+  listings: [];
+  currentUser: object;
+}
+
+const FavoritesClient: React.FC<FavoritesClientProps> = ({ listings, currentUser }) => {
   return (
     <div>FavoritesClient</div>
   );
