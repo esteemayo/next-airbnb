@@ -59,11 +59,14 @@ const UserMenu = () => {
           <div className='flex flex-col cursor-pointer'>
             {session.status === 'authenticated' ? (
               <>
-                <MenuItem 
+                <MenuItem
                   onClick={() => router.push('/trips')}
                   label='My trips'
                 />
-                <MenuItem onClick={() => {}} label='My favourites' />
+                <MenuItem
+                  onClick={() => router.push('/favorites')}
+                  label='My favourites'
+                />
                 <MenuItem
                   onClick={() => router.push('/reservations')}
                   label='My reservations'
