@@ -7,6 +7,8 @@ import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
 
 const ListingPage = () => {
+  const [listings, setListings] = useState([]);
+
   return (
     <ClientOnly>
       <EmptyState
