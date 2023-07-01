@@ -1,5 +1,8 @@
 'use client';
 
+import Heading from '@/components/Heading';
+import Container from '@/components/Container';
+
 interface FavoritesClientProps {
   listings: [];
   currentUser: object;
@@ -7,7 +10,12 @@ interface FavoritesClientProps {
 
 const FavoritesClient: React.FC<FavoritesClientProps> = ({ listings, currentUser }) => {
   return (
-    <div>FavoritesClient</div>
+    <Container>
+      <Heading
+        title='Favorites'
+        subtitle='List of places you have favorited!'
+      />
+    </Container>
   );
 };
 
