@@ -4,6 +4,8 @@ const apiEndpoint = '/favorites';
 
 const favoriteUrl = (listingId: string) => `${apiEndpoint}/${listingId}`;
 
+export const getFavorites = () => http.get(apiEndpoint);
+
 export const createFavorite = (listingId: string) =>
   http.post(favoriteUrl(listingId));
 
