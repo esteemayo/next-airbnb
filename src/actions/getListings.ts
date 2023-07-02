@@ -1,6 +1,4 @@
 import prisma from '@/libs/prismadb';
-import Listing from '@/models/Listing';
-import connectDB from '@/utils/db';
 
 export default async function getListings() {
   try {
