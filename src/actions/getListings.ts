@@ -1,5 +1,9 @@
 import prisma from '@/libs/prismadb';
 
+export interface IListingsParams {
+  userId?: string;
+}
+
 export default async function getListings() {
   try {
     const listings = await prisma.listing.findMany({
