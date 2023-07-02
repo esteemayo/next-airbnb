@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from 'react';
 
-import Container from '@/components/Container';
 import ClientOnly from '@/components/ClientOnly';
-import EmptyState from '@/components/EmptyState';
-import { getListings } from '@/services/listingService';
+import Container from '@/components/Container';
 import ListingCard from '@/components/listings/ListingCard';
+import EmptyState from '@/components/EmptyState';
+
+import { getListings } from '@/services/listingService';
 import { IListingsParams } from '@/actions/getListings';
 
 interface HomeProps {
