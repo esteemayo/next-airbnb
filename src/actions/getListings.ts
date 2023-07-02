@@ -4,7 +4,7 @@ export interface IListingsParams {
   userId?: string;
 }
 
-export default async function getListings() {
+export default async function getListings(params: IListingsParams) {
   try {
     const listings = await prisma.listing.findMany({
       orderBy: {
