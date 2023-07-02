@@ -7,7 +7,7 @@ import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
 import { getReservations } from '@/services/reservationService';
 
-import TripsClient from './TripsClient';
+import PropertiesClient from './PropertiesClient';
 
 const PropertiesPage = () => {
   const session = useSession();
@@ -49,7 +49,7 @@ const PropertiesPage = () => {
 
   return (
     <ClientOnly>
-      <TripsClient listings={listings} currentUser={session} />
+      <PropertiesClient listings={listings} currentUser={session} />
     </ClientOnly>
   );
 };
