@@ -45,15 +45,15 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
         subtitle={`Where you've been and where you're going`}
       />
       <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8'>
-        {listings.map((reservation) => {
+        {listings.map((listing) => {
           return (
             <ListingCard
-              key={reservation._id}
-              data={reservation.listing}
-              actionId={reservation._id}
+              key={listing._id}
+              data={listing.listing}
+              actionId={listing._id}
               onAction={onCancel}
-              disabled={deletingId === reservation._id}
-              actionLabel='Cancel reservation'
+              disabled={deletingId === listing._id}
+              actionLabel='Cancel listing'
               currentUser={currentUser}
             />
           );
