@@ -10,12 +10,12 @@ import Container from '@/components/Container';
 import { deleteReservation } from '@/services/reservationService';
 
 interface PropertiesClientProps {
-  reservations: [];
+  listings: [];
   currentUser?: object | null;
 }
 
 const PropertiesClient: React.FC<PropertiesClientProps> = ({
-  reservations,
+  listings,
   currentUser,
 }) => {
   const router = useRouter();
@@ -45,7 +45,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
         subtitle={`Where you've been and where you're going`}
       />
       <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8'>
-        {reservations.map((reservation) => {
+        {listings.map((reservation) => {
           return (
             <ListingCard
               key={reservation._id}
