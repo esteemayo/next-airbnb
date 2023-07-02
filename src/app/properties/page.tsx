@@ -40,8 +40,8 @@ const PropertiesPage = () => {
     return (
       <ClientOnly>
         <EmptyState
-          title='No trips found'
-          subtitle='Looks like you havent reserved any trips.'
+          title='No properties found'
+          subtitle='Looks like you have no properties.'
         />
       </ClientOnly>
     );
