@@ -7,9 +7,13 @@ const SearchModal = () => {
   const searchModal = useSearchModal();
 
   return (
-    <div>
-      SearchModal
-    </div>
+    <Modal
+      isOpen={searchModal.isOpen}
+      onClose={searchModal.onClose}
+      onSubmit={searchModal.onOpen}
+      title='Filters'
+      actionLabel='Search'
+    />
   );
 };
 
