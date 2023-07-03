@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { Range } from 'react-date-range';
 
 import Modal from './Modal';
 import useSearchModal from '@/hooks/useSearchModal';
@@ -21,6 +22,11 @@ const SearchModal = () => {
   const [roomCount, setRoomCount] = useState(1);
   const [bathroomCount, setBathroomCount] = useState(1);
   const [guestCount, setGuestCount] = useState(1);
+  const [dateRange, setDateRange] = useState<Range>({
+    startDate: new Date(),
+    endDate: new Date(),
+    key: 'selection',
+  });
 
   return (
     <Modal
