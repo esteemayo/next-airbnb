@@ -4,7 +4,8 @@ const apiEndpoint = '/listings';
 
 const listingUrl = (listingId: string) => `${apiEndpoint}/${listingId}`;
 
-export const getListings = () => http.get(apiEndpoint);
+export const getListings = (query: string) =>
+  http.get(query ? `${apiEndpoint}?userId=${query}` : apiEndpoint);
 
 export const getListing = (listingId: string) =>
   http.get(listingUrl(listingId));
