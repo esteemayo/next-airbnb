@@ -160,6 +160,7 @@ const SearchModal = () => {
       title='Filters'
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
+      secondaryAction={step === STEPS.LOCATION ? undefined : onBack}
       body={bodyContent}
     />
   );
