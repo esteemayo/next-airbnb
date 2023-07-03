@@ -8,6 +8,7 @@ import qs from 'query-string';
 import { formatISO } from 'date-fns';
 
 import CountrySelect from '../inputs/CountrySelect';
+import Calendar from '../inputs/Calendar';
 import { CountrySelectValue } from '../inputs/CountrySelect';
 
 import Modal from './Modal';
