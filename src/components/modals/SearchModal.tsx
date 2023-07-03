@@ -40,6 +40,10 @@ const SearchModal = () => {
     [location]
   );
 
+  const onBack = useCallback(() => {
+    setStep((prev) => prev - 1);
+  }, []);
+
   return (
     <Modal
       isOpen={searchModal.isOpen}
