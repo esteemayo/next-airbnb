@@ -154,6 +154,7 @@ const SearchModal = () => {
       onSubmit={searchModal.onOpen}
       title='Filters'
       actionLabel={actionLabel}
+      secondaryActionLabel={secondaryActionLabel}
       body={bodyContent}
     />
   );
