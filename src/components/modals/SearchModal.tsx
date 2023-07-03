@@ -1,5 +1,6 @@
 'use client';
 
+import Modal from './Modal';
 import useSearchModal from '@/hooks/useSearchModal';
 
 const SearchModal = () => {
