@@ -38,7 +38,7 @@ export const DELETE = async (
     }
 
     return NextResponse.json(reservation, {
-      status: 204,
+      status: 200,
     });
   } catch (err: any) {
     return NextResponse.json(err.message, {
