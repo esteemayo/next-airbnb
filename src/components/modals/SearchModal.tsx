@@ -7,10 +7,11 @@ import { Range } from 'react-date-range';
 import qs from 'query-string';
 import { formatISO } from 'date-fns';
 
-import Modal from './Modal';
-import { CountrySelectValue } from '../inputs/CountrySelect';
-import Heading from '../Heading';
 import CountrySelect from '../inputs/CountrySelect';
+import { CountrySelectValue } from '../inputs/CountrySelect';
+
+import Modal from './Modal';
+import Heading from '../Heading';
 
 import useSearchModal from '@/hooks/useSearchModal';
 
