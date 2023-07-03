@@ -7,7 +7,7 @@ import { useCallback, useState } from 'react';
 import Heading from '@/components/Heading';
 import ListingCard from '@/components/listings/ListingCard';
 import Container from '@/components/Container';
-import { deleteReservation } from '@/services/reservationService';
+import { deleteListing } from '@/services/listingService';
 
 interface PropertiesClientProps {
   listings: [];
@@ -26,7 +26,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
       setDeletingId(id);
 
       try {
-        await deleteReservation(id);
+        await deleteListing(id);
         toast.success('listing deleted');
         router.refresh();
       } catch (err: any) {
