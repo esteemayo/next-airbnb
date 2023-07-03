@@ -10,6 +10,7 @@ import { formatISO } from 'date-fns';
 import CountrySelect from '../inputs/CountrySelect';
 import Calendar from '../inputs/Calendar';
 import { CountrySelectValue } from '../inputs/CountrySelect';
+import Counter from '../inputs/Counter';
 
 import Modal from './Modal';
 import Heading from '../Heading';
