@@ -136,6 +136,17 @@ const SearchModal = () => {
     </div>
   );
 
+  if (step === STEPS.DATE) {
+    bodyContent = (
+      <div className='flex flex-col gap-8'>
+        <Heading
+          title='Where do you plan to go?'
+          subtitle='Make sure everyone is free!'
+        />
+      </div>
+    );
+  }
+
   return (
     <Modal
       isOpen={searchModal.isOpen}
