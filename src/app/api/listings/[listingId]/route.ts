@@ -5,7 +5,7 @@ import { getLoggedInUser } from '@/actions/getLoggedInUser';
 import Listing from '@/models/Listing';
 
 interface IParams {
-  listingId: string;
+  listingId?: string;
 }
 
 export const GET = async (
