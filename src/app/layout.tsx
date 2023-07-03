@@ -3,6 +3,7 @@ import { Nunito } from 'next/font/google';
 import LoginModal from '@/components/modals/LoginModal';
 import RegisterModal from '@/components/modals/RegisterModal';
 import RentModal from '@/components/modals/RentModal';
+import SearchModal from '@/components/modals/SearchModal';
 
 import ToasterProvider from '@/providers/ToasterProvider';
 import Navbar from '@/components/navbar/Navbar';
@@ -30,6 +31,7 @@ export default function RootLayout({
           <ClientOnly>
             <ToasterProvider />
             <Navbar />
+            <SearchModal />
             <RentModal />
             <LoginModal />
             <RegisterModal />
