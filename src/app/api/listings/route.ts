@@ -4,10 +4,13 @@ import connectDB from '@/utils/db';
 import Listing from '@/models/Listing';
 
 export const GET = async (request: Request) => {
+  const { searchParams } = new URL(request.url);
+  const user = searchParams.get('userId');
+
   try {
     await connectDB();
 
-    const listings = await Listing.find();
+    const listings = await Listing.find(user && { user });
     return NextResponse.json(listings, {
       status: 200,
     });
