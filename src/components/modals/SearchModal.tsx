@@ -144,6 +144,10 @@ const SearchModal = () => {
           title='Where do you plan to go?'
           subtitle='Make sure everyone is free!'
         />
+        <Calendar
+          value={dateRange}
+          onChange={(value) => setDateRange(value.selection)}
+        />
       </div>
     );
   }
