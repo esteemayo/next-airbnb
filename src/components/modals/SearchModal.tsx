@@ -6,6 +6,7 @@ import Modal from './Modal';
 import useSearchModal from '@/hooks/useSearchModal';
 
 const SearchModal = () => {
+  const router = useRouter();
   const searchModal = useSearchModal();
 
   return (
