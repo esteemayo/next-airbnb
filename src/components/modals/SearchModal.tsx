@@ -7,6 +7,8 @@ import useSearchModal from '@/hooks/useSearchModal';
 
 const SearchModal = () => {
   const router = useRouter();
+  const params = useSearchParams();
+
   const searchModal = useSearchModal();
 
   return (
