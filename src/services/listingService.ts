@@ -12,4 +12,4 @@ export const getListing = (listingId: string) =>
 export const createListing = (listing: any) => http.post(apiEndpoint, listing);
 
 export const deleteListing = (listingId: string) =>
-  http.delete(`${apiEndpoint}/${listingId}`);
+  http.delete(listingUrl(listingId));
