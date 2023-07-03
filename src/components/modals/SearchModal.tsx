@@ -4,6 +4,8 @@ import { useCallback, useMemo, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { Range } from 'react-date-range';
+import qs from 'query-string';
+import { formatISO } from 'date-fns';
 
 import Modal from './Modal';
 import { CountrySelectValue } from '../inputs/CountrySelect';
@@ -47,6 +49,58 @@ const SearchModal = () => {
   const onNext = useCallback(() => {
     setStep((prev) => prev + 1);
   }, []);
+
+  const onSubmit = useCallback(async () => {
+    if (step !== STEPS.INFO) {
+      return onNext();
+    }
+
+    let currentQuery = {};
+
+    if (params) {
+      currentQuery = qs.parse(params.toString());
+    }
+
+    const updatedQuery: any = {
+      ...currentQuery,
+      locationValue: location?.value,
+      guestCount,
+      roomCount,
+      bathroomCount,
+    };
+
+    if (dateRange.startDate) {
+      updatedQuery.startDate = formatISO(dateRange.startDate);
+    }
+
+    if (dateRange.endDate) {
+      updatedQuery.endDate = formatISO(dateRange.endDate);
+    }
+
+    const url = qs.stringifyUrl(
+      {
+        url: '/',
+        query: updatedQuery,
+      },
+      { skipNull: true }
+    );
+
+    setStep(STEPS.LOCATION);
+    searchModal.onClose();
+
+    router.push(url);
+  }, [
+    step,
+    searchModal,
+    location,
+    guestCount,
+    roomCount,
+    bathroomCount,
+    dateRange,
+    onNext,
+    params,
+    router,
+  ]);
 
   return (
     <Modal
