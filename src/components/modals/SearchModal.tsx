@@ -156,7 +156,7 @@ const SearchModal = () => {
     <Modal
       isOpen={searchModal.isOpen}
       onClose={searchModal.onClose}
-      onSubmit={searchModal.onOpen}
+      onSubmit={onSubmit}
       title='Filters'
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
