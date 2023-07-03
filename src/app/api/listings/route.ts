@@ -5,7 +5,15 @@ import Listing from '@/models/Listing';
 
 export const GET = async (request: Request) => {
   const { searchParams } = new URL(request.url);
+
   const user = searchParams.get('userId');
+  const guestCount = searchParams.get('guestCount');
+  const roomCount = searchParams.get('roomCount');
+  const bathroomCount = searchParams.get('bathroomCount');
+  const startDate = searchParams.get('startDate');
+  const endDate = searchParams.get('endDate');
+  const locationValue = searchParams.get('locationValue');
+  const category = searchParams.get('category');
 
   try {
     await connectDB();
