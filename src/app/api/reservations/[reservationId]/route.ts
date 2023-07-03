@@ -30,7 +30,9 @@ export const DELETE = async (
     const reservation = await Reservation.findById(reservationId);
 
     if (!reservation) {
-      return NextResponse.json('No reservation found with the given ID');
+      return NextResponse.json('No reservation found with the given ID', {
+        status: 404,
+      });
     }
 
     if (reservation.user === String(currentUser.name)) {
