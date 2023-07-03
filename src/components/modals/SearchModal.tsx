@@ -169,6 +169,12 @@ const SearchModal = () => {
           value={roomCount}
           onChange={(value) => setRoomCount(value)}
         />
+        <Counter
+          title='Bathrooms'
+          subtitle='How many bathrooms do you need?'
+          value={bathroomCount}
+          onChange={(value) => setBathroomCount(value)}
+        />
       </div>
     );
   }
