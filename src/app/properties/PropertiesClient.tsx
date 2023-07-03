@@ -27,7 +27,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
 
       try {
         await deleteListing(id);
-        toast.success('listing deleted');
+        toast.success('Listing deleted');
         router.refresh();
       } catch (err: any) {
         toast.error(err?.response?.data?.error);
