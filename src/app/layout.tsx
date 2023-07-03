@@ -30,11 +30,11 @@ export default function RootLayout({
         <AuthProvider>
           <ClientOnly>
             <ToasterProvider />
-            <Navbar />
             <SearchModal />
             <RentModal />
             <LoginModal />
             <RegisterModal />
+            <Navbar />
           </ClientOnly>
           <div className='pb-20 pt-28'>{children}</div>
         </AuthProvider>
