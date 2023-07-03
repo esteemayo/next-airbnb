@@ -6,6 +6,8 @@ import dynamic from 'next/dynamic';
 import { Range } from 'react-date-range';
 
 import Modal from './Modal';
+import { CountrySelectValue } from '../inputs/CountrySelect';
+
 import useSearchModal from '@/hooks/useSearchModal';
 
 enum STEPS {
@@ -19,6 +21,7 @@ const SearchModal = () => {
   const params = useSearchParams();
   const searchModal = useSearchModal();
 
+  const [location, setLocation] = useState<CountrySelectValue>();
   const [step, setStep] = useState(STEPS.LOCATION);
   const [roomCount, setRoomCount] = useState(1);
   const [bathroomCount, setBathroomCount] = useState(1);
@@ -28,6 +31,14 @@ const SearchModal = () => {
     endDate: new Date(),
     key: 'selection',
   });
+
+  const Map = useMemo(
+    () =>
+      dynamic(() => import('../Map'), {
+        ssr: false,
+      }),
+    [location]
+  );
 
   return (
     <Modal
