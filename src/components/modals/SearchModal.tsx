@@ -19,6 +19,7 @@ const SearchModal = () => {
 
   const [step, setStep] = useState(STEPS.LOCATION);
   const [guestCount, setGuestCount] = useState(1);
+  const [roomCount, setRoomCount] = useState(1);
 
   return (
     <Modal
