@@ -153,7 +153,7 @@ const SearchModal = () => {
       onClose={searchModal.onClose}
       onSubmit={searchModal.onOpen}
       title='Filters'
-      actionLabel='Search'
+      actionLabel={actionLabel}
       body={bodyContent}
     />
   );
