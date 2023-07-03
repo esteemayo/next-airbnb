@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 import Modal from './Modal';
 import useSearchModal from '@/hooks/useSearchModal';
