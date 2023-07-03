@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 import ClientOnly from '@/components/ClientOnly';
 import EmptyState from '@/components/EmptyState';
-import { getReservations } from '@/services/reservationService';
+import { getListings } from '@/services/listingService';
 
 import PropertiesClient from './PropertiesClient';
 
@@ -17,7 +17,7 @@ const PropertiesPage = () => {
 
   const fetchListings = useCallback(async () => {
     try {
-      const { data } = await getReservations(user);
+      const { data } = await getListings(user);
       setListings(data);
     } catch (err: any) {
       console.log(err);
