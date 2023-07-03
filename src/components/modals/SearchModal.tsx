@@ -1,11 +1,11 @@
 'use client';
 
-import { useCallback, useMemo, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
-import { Range } from 'react-date-range';
+import { useCallback, useMemo, useState } from 'react';
 import qs from 'query-string';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { formatISO } from 'date-fns';
+import { Range } from 'react-date-range';
 
 import CountrySelect from '../inputs/CountrySelect';
 import Calendar from '../inputs/Calendar';
