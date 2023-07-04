@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 import ClientOnly from '@/components/ClientOnly';
 import Container from '@/components/Container';
@@ -15,21 +16,24 @@ interface HomeProps {
 }
 
 const Home = ({ searchParams }: HomeProps) => {
+  const params = useSearchParams();
+  const query = params.get('category');
+
   const [listings, setListings] = useState([]);
 
-  const fetchListings = async () => {
+  const fetchListings = useCallback(async () => {
     try {
-      const { data } = await getListings(searchParams);
-      console.log(data);
+      const { data } = await getListings(query);
+      // const { data } = await getListings(searchParams);
       setListings(data);
     } catch (err) {
       console.log(err);
     }
-  };
+  }, [query]);
 
   useEffect(() => {
     fetchListings();
-  }, []);
+  }, [fetchListings]);
 
   if (listings.length === 0) {
     return (
