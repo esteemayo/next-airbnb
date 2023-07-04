@@ -46,6 +46,10 @@ export const GET = async (request: Request) => {
       };
     }
 
+    if (locationValue) {
+      query.locationValue = locationValue;
+    }
+
     const listings = await Listing.find(user && { user });
     return NextResponse.json(listings, {
       status: 200,
