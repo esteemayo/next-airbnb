@@ -18,6 +18,34 @@ export const GET = async (request: Request) => {
   try {
     await connectDB();
 
+    let query: any = {};
+    
+    if (user) {
+      query.user = user;
+    }
+
+    if (category) {
+      query.category = category;
+    }
+
+    if (roomCount) {
+      query.roomCount = {
+        $gte: +roomCount,
+      };
+    }
+
+    if (guestCount) {
+      query.guestCount = {
+        $gte: +guestCount,
+      };
+    }
+
+    if (bathroomCount) {
+      query.bathroomCount = {
+        $gte: +bathroomCount,
+      };
+    }
+
     const listings = await Listing.find(user && { user });
     return NextResponse.json(listings, {
       status: 200,
