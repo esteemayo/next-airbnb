@@ -19,7 +19,7 @@ export const GET = async (request: Request) => {
     await connectDB();
 
     let query: any = {};
-    
+
     if (user) {
       query.user = user;
     }
@@ -50,7 +50,26 @@ export const GET = async (request: Request) => {
       query.locationValue = locationValue;
     }
 
-    const listings = await Listing.find(user && { user });
+    if (startDate && endDate) {
+      query.NOT = {
+        reservations: {
+          some: {
+            OR: [
+              {
+                endDate: { gte: startDate },
+                startDate: { lte: startDate },
+              },
+              {
+                startDate: { lte: endDate },
+                endDate: { gte: endDate },
+              },
+            ],
+          },
+        },
+      };
+    }
+
+    const listings = await Listing.find(query);
     return NextResponse.json(listings, {
       status: 200,
     });
