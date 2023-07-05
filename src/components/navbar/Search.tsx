@@ -3,6 +3,7 @@
 import { BiSearch } from 'react-icons/bi';
 import { useSearchParams } from 'next/navigation';
 
+import useCountries from '@hooks/useCountries';
 import useSearchModal from '@/hooks/useSearchModal';
 
 const Search = () => {
