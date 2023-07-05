@@ -68,7 +68,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
   const disabledDates = useMemo(() => {
     let dates: Date[] = [];
 
-    reservations.forEach((reservation) => {
+    reservations.forEach((reservation: any) => {
       const range = eachDayOfInterval({
         start: new Date(reservation.startDate),
         end: new Date(reservation.endDate),
@@ -88,7 +88,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
     if (dateRange.startDate && dateRange.endDate) {
       const dayCount = differenceInCalendarDays(
         dateRange.endDate,
-        dateRange.startDate,
+        dateRange.startDate
       );
 
       if (dayCount && listing.price) {
