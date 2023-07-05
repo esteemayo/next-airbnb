@@ -1,7 +1,6 @@
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
 import { useCallback, useMemo } from 'react';
-import { toast } from 'react-hot-toast';
 
 import useLoginModal from './useLoginModal';
 import { createFavorite, deleteFavorite } from '@/services/favoriteService';
