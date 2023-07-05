@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 interface SearchModalStore {
-  isOpen: boolen;
+  isOpen: boolean;
   onOpen(): void;
   onClose(): void;
 }
