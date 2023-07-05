@@ -52,7 +52,7 @@ const Search = () => {
       <div className='flex flex-row items-center justify-between'>
         <div className='text-sm font-semibold px-6'>{ locationValue}</div>
         <div className='hidden sm:block text-sm font-semibold px-6 border-x-[1px] flex-1 text-center'>
-          Any Week
+          {durationLabel}
         </div>
         <div className='text-sm pl-6 pr-2 text-gray-500 flex flex-row items-center gap-3'>
           <div className='hidden sm:block'>Add Guests</div>
