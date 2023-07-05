@@ -16,7 +16,7 @@ interface IParams {
 
 const ListingPage = async ({ params }: { params: IParams }) => {
   const [listing, setListing] = useState({});
-  const [reservations, setRersevations] = useState([]);
+  const [reservations, setReservations] = useState([]);
 
   const fetchListing = useCallback(async () => {
     try {
