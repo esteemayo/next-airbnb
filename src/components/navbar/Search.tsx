@@ -31,13 +31,13 @@ const Search = () => {
     if (startDate && endDate) {
       const start = new Date(startDate as string);
       const end = new Date(endDate as string);
-  
+
       let diff = differenceInDays(end, start);
-  
+
       if (diff === 0) {
         diff = 1;
       }
-  
+
       return `${diff} Days`;
     }
 
