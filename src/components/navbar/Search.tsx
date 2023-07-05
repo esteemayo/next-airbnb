@@ -44,6 +44,14 @@ const Search = () => {
     return 'Any Week';
   }, [startDate, endDate]);
 
+  const guestLabel = useMemo(() => {
+    if (guestCount) {
+      return `${guestCount} Guests`;
+    }
+
+    return 'Add Guests';
+  }, [guestCount]);
+
   return (
     <div
       onClick={searchModal.onOpen}
