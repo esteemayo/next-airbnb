@@ -27,6 +27,23 @@ const Search = () => {
     return 'Anywhere';
   }, [getByValue, locationValue]);
 
+  const durationLabel = useMemo(() => {
+    if (startDate && endDate) {
+      const start = new Date(startDate);
+      const end = new Date(endDate);
+  
+      let diff = differenceInDays(end - start);
+  
+      if (diff === 0) {
+        diff = 1;
+      }
+  
+      return `${diff} Days`;
+    }
+
+    return 'Any Week';
+  }, [startDate, endDate]);
+
   return (
     <div
       onClick={searchModal.onOpen}
