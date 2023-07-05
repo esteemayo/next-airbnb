@@ -1,13 +1,30 @@
 'use client';
 
 import { BiSearch } from 'react-icons/bi';
+import { useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-import useCountries from '@hooks/useCountries';
+import useCountries from '@/hooks/useCountries';
 import useSearchModal from '@/hooks/useSearchModal';
 
 const Search = () => {
+  const params = useSearchParams();
+
   const searchModal = useSearchModal();
+  const { getByValue } = useCountries();
+
+  const locationValue = params.get('locationValue');
+  const startDate = params.get('startDate');
+  const endDate = params.get('endDate');
+  const guestCount = params.get('guestCount');
+
+  const locationLabel = useMemo(() => {
+    if (locationValue) {
+      return getByValue(locationValue as string)?.label;
+    }
+
+    return 'Anywhere';
+  }, [getByValue, locationValue]);
 
   return (
     <div
@@ -15,7 +32,7 @@ const Search = () => {
       className='border-[1px] w-full md:w-auto py-2 rounded-full shadow-sm hover:shadow-md transition cursor-pointer'
     >
       <div className='flex flex-row items-center justify-between'>
-        <div className='text-sm font-semibold px-6'>Anywhere</div>
+        <div className='text-sm font-semibold px-6'>{ locationValue}</div>
         <div className='hidden sm:block text-sm font-semibold px-6 border-x-[1px] flex-1 text-center'>
           Any Week
         </div>
