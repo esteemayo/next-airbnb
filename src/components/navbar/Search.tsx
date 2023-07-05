@@ -3,6 +3,7 @@
 import { BiSearch } from 'react-icons/bi';
 import { useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { differenceInDays } from 'date-fns';
 
 import useCountries from '@/hooks/useCountries';
 import useSearchModal from '@/hooks/useSearchModal';
