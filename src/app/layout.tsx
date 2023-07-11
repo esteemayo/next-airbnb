@@ -7,6 +7,7 @@ import SearchModal from '@/components/modals/SearchModal';
 import ClientOnly from '@/components/ClientOnly';
 import RentModal from '@/components/modals/RentModal';
 
+import AuthProvider from '@/providers/AuthProvider';
 import ToasterProvider from '@/providers/ToasterProvider';
 
 import './globals.css';
