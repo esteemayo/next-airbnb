@@ -8,7 +8,6 @@ import Navbar from '@/components/navbar/Navbar';
 
 import ToasterProvider from '@/providers/ToasterProvider';
 import AuthProvider from '@/providers/AuthProvider';
-import ClientOnly from '@/components/ClientOnly';
 
 import './globals.css';
 
