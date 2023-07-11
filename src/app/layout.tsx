@@ -6,7 +6,6 @@ import RentModal from '@/components/modals/RentModal';
 import SearchModal from '@/components/modals/SearchModal';
 
 import ToasterProvider from '@/providers/ToasterProvider';
-import Navbar from '@/components/navbar/Navbar';
 import AuthProvider from '@/providers/AuthProvider';
 import ClientOnly from '@/components/ClientOnly';
 
