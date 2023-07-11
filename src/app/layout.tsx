@@ -2,7 +2,7 @@ import { Nunito } from 'next/font/google';
 
 import LoginModal from '@/components/modals/LoginModal';
 import RegisterModal from '@/components/modals/RegisterModal';
-import RentModal from '@/components/modals/RentModal';
+import Navbar from '@/components/navbar/Navbar';
 import SearchModal from '@/components/modals/SearchModal';
 import ClientOnly from '@/components/ClientOnly';
 import RentModal from '@/components/modals/RentModal';
