@@ -8,7 +8,6 @@ import ClientOnly from '@/components/ClientOnly';
 import RentModal from '@/components/modals/RentModal';
 
 import ToasterProvider from '@/providers/ToasterProvider';
-import AuthProvider from '@/providers/AuthProvider';
 
 import './globals.css';
 
