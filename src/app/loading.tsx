@@ -1,12 +1,9 @@
 'use client';
 
-// import Loader from '@/components/Loader';
+import Loader from '@/components/Loader';
 
 const Loading = () => {
-  return (
-    // <Loader />
-    <div>Loading</div>
-  );
+  return <Loader />;
 };
 
 export default Loading;
